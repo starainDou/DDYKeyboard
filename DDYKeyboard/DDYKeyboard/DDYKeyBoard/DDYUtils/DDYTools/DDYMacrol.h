@@ -113,9 +113,10 @@
 #define DDYApplication [UIApplication sharedApplication]
 #define DDYAppDelegate [UIApplication sharedApplication].delegate
 #define DDYKeyWindow \
-[[[UIApplication sharedApplication] delegate] window] ？\
-[[[UIApplication sharedApplication] delegate] window] : \
-[[UIApplication sharedApplication] keyWindow]
+(UIApplication.sharedApplication.delegate.window ? \
+UIApplication.sharedApplication.delegate.window : \
+UIApplication.sharedApplication.keyWindow)
+// DDYKeyWindow.safeAreaInsets.bottom
 
 /** 判断真机模拟器 必须先判断TARGET_IPHONE_SIMULATOR，原因自行search */
 #if TARGET_IPHONE_SIMULATOR

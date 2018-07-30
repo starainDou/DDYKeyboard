@@ -14,7 +14,6 @@
 		A4C6741D210EDDF80059E1DF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C67408210EDDF80059E1DF /* qrcode.png */; };
 		A4C6741E210EDDF80059E1DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6740A210EDDF80059E1DF /* ViewController.m */; };
 		A4C6741F210EDDF80059E1DF /* DDYKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67415210EDDF80059E1DF /* DDYKeyboardView.m */; };
-		A4C67423210EE47F0059E1DF /* DDYKeyboardVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67422210EE47F0059E1DF /* DDYKeyboardVoiceView.m */; };
 		A4C674AD210EE4FB0059E1DF /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A4C67428210EE4FA0059E1DF /* keccak.c */; };
 		A4C674AE210EE4FB0059E1DF /* NSArray+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6742B210EE4FA0059E1DF /* NSArray+DDYExtension.m */; };
 		A4C674AF210EE4FB0059E1DF /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6742D210EE4FA0059E1DF /* NSString+DDYExtension.m */; };
@@ -70,13 +69,6 @@
 		A4C674E1210EE4FB0059E1DF /* UIView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6749C210EE4FA0059E1DF /* UIView+LinkBlock.m */; };
 		A4C674E2210EE4FB0059E1DF /* UIViewController+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6749E210EE4FA0059E1DF /* UIViewController+LinkBlock.m */; };
 		A4C674E3210EE4FB0059E1DF /* UIWebView+LinkBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C674A0210EE4FA0059E1DF /* UIWebView+LinkBlock.m */; };
-		A4C674E4210EE4FB0059E1DF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C674A3210EE4FA0059E1DF /* AppDelegate.m */; };
-		A4C674E5210EE4FB0059E1DF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4C674A4210EE4FA0059E1DF /* LaunchScreen.storyboard */; };
-		A4C674E6210EE4FB0059E1DF /* DDYTestNavigationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C674A7210EE4FA0059E1DF /* DDYTestNavigationVC.m */; };
-		A4C674E7210EE4FB0059E1DF /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A4C674A8210EE4FA0059E1DF /* Info.plist */; };
-		A4C674E8210EE4FB0059E1DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C674A9210EE4FA0059E1DF /* main.m */; };
-		A4C674E9210EE4FB0059E1DF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C674AA210EE4FA0059E1DF /* qrcode.png */; };
-		A4C674EA210EE4FB0059E1DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C674AC210EE4FA0059E1DF /* ViewController.m */; };
 		A4C67571210EED810059E1DF /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67558210EED7F0059E1DF /* MASCompositeConstraint.m */; };
 		A4C67572210EED810059E1DF /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67562210EED800059E1DF /* MASConstraint.m */; };
 		A4C67573210EED810059E1DF /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67563210EED800059E1DF /* MASViewAttribute.m */; };
@@ -102,8 +94,6 @@
 		A4C6740A210EDDF80059E1DF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A4C67414210EDDF80059E1DF /* DDYKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardView.h; sourceTree = "<group>"; };
 		A4C67415210EDDF80059E1DF /* DDYKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYKeyboardView.m; sourceTree = "<group>"; };
-		A4C67421210EE47F0059E1DF /* DDYKeyboardVoiceView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardVoiceView.h; sourceTree = "<group>"; };
-		A4C67422210EE47F0059E1DF /* DDYKeyboardVoiceView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYKeyboardVoiceView.m; sourceTree = "<group>"; };
 		A4C67426210EE4FA0059E1DF /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
 		A4C67428210EE4FA0059E1DF /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
 		A4C67429210EE4FA0059E1DF /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
@@ -219,16 +209,6 @@
 		A4C6749E210EE4FA0059E1DF /* UIViewController+LinkBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LinkBlock.m"; sourceTree = "<group>"; };
 		A4C6749F210EE4FA0059E1DF /* UIWebView+LinkBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+LinkBlock.h"; sourceTree = "<group>"; };
 		A4C674A0210EE4FA0059E1DF /* UIWebView+LinkBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+LinkBlock.m"; sourceTree = "<group>"; };
-		A4C674A2210EE4FA0059E1DF /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		A4C674A3210EE4FA0059E1DF /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		A4C674A5210EE4FA0059E1DF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		A4C674A6210EE4FA0059E1DF /* DDYTestNavigationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYTestNavigationVC.h; sourceTree = "<group>"; };
-		A4C674A7210EE4FA0059E1DF /* DDYTestNavigationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYTestNavigationVC.m; sourceTree = "<group>"; };
-		A4C674A8210EE4FA0059E1DF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A4C674A9210EE4FA0059E1DF /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A4C674AA210EE4FA0059E1DF /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
-		A4C674AB210EE4FA0059E1DF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		A4C674AC210EE4FA0059E1DF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		A4C67558210EED7F0059E1DF /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
 		A4C67559210EED7F0059E1DF /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
 		A4C6755A210EED7F0059E1DF /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
@@ -389,8 +369,11 @@
 		A4C67418210EDDF80059E1DF /* DDYKeyboardVoice */ = {
 			isa = PBXGroup;
 			children = (
-				A4C67421210EE47F0059E1DF /* DDYKeyboardVoiceView.h */,
-				A4C67422210EE47F0059E1DF /* DDYKeyboardVoiceView.m */,
+				A4C67654210F278A0059E1DF /* DDYSoundTouch */,
+				A4C67653210F27720059E1DF /* DDYVoiceRecord */,
+				A4C67652210F27650059E1DF /* DDYVoiceTalk */,
+				A4C67651210F274F0059E1DF /* DDYVoiceChange */,
+				A4C67650210F27340059E1DF /* DDYVoiceView */,
 			);
 			path = DDYKeyboardVoice;
 			sourceTree = "<group>";
@@ -401,7 +384,6 @@
 				A4C67425210EE4FA0059E1DF /* DDYCategory */,
 				A4C67447210EE4FA0059E1DF /* DDYTools */,
 				A4C67449210EE4FA0059E1DF /* LinkBlockKit */,
-				A4C674A1210EE4FA0059E1DF /* System */,
 			);
 			path = DDYUtils;
 			sourceTree = "<group>";
@@ -590,23 +572,6 @@
 			path = UIKit;
 			sourceTree = "<group>";
 		};
-		A4C674A1210EE4FA0059E1DF /* System */ = {
-			isa = PBXGroup;
-			children = (
-				A4C674A2210EE4FA0059E1DF /* AppDelegate.h */,
-				A4C674A3210EE4FA0059E1DF /* AppDelegate.m */,
-				A4C674A4210EE4FA0059E1DF /* LaunchScreen.storyboard */,
-				A4C674A6210EE4FA0059E1DF /* DDYTestNavigationVC.h */,
-				A4C674A7210EE4FA0059E1DF /* DDYTestNavigationVC.m */,
-				A4C674A8210EE4FA0059E1DF /* Info.plist */,
-				A4C674A9210EE4FA0059E1DF /* main.m */,
-				A4C674AA210EE4FA0059E1DF /* qrcode.png */,
-				A4C674AB210EE4FA0059E1DF /* ViewController.h */,
-				A4C674AC210EE4FA0059E1DF /* ViewController.m */,
-			);
-			path = System;
-			sourceTree = "<group>";
-		};
 		A4C67557210EE63A0059E1DF /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -646,6 +611,41 @@
 				A4C6757D210EF2880059E1DF /* DDYKeyboardTextView.m */,
 			);
 			path = DDYKeyboardTextView;
+			sourceTree = "<group>";
+		};
+		A4C67650210F27340059E1DF /* DDYVoiceView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DDYVoiceView;
+			sourceTree = "<group>";
+		};
+		A4C67651210F274F0059E1DF /* DDYVoiceChange */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DDYVoiceChange;
+			sourceTree = "<group>";
+		};
+		A4C67652210F27650059E1DF /* DDYVoiceTalk */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DDYVoiceTalk;
+			sourceTree = "<group>";
+		};
+		A4C67653210F27720059E1DF /* DDYVoiceRecord */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DDYVoiceRecord;
+			sourceTree = "<group>";
+		};
+		A4C67654210F278A0059E1DF /* DDYSoundTouch */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DDYSoundTouch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -706,10 +706,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C6741D210EDDF80059E1DF /* qrcode.png in Resources */,
-				A4C674E5210EE4FB0059E1DF /* LaunchScreen.storyboard in Resources */,
 				A4C6741B210EDDF80059E1DF /* Info.plist in Resources */,
-				A4C674E9210EE4FB0059E1DF /* qrcode.png in Resources */,
-				A4C674E7210EE4FB0059E1DF /* Info.plist in Resources */,
 				A4C6741A210EDDF80059E1DF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -728,7 +725,6 @@
 				A4C67571210EED810059E1DF /* MASCompositeConstraint.m in Sources */,
 				A4C67578210EED810059E1DF /* MASConstraintMaker.m in Sources */,
 				A4C674BC210EE4FB0059E1DF /* JSContext+LinkBlock.m in Sources */,
-				A4C67423210EE47F0059E1DF /* DDYKeyboardVoiceView.m in Sources */,
 				A4C674C8210EE4FB0059E1DF /* NSNumber+LinkBlock.m in Sources */,
 				A4C674AD210EE4FB0059E1DF /* keccak.c in Sources */,
 				A4C674B0210EE4FB0059E1DF /* NSTimer+DDYExtension.m in Sources */,
@@ -770,13 +766,11 @@
 				A4C674C4210EE4FB0059E1DF /* NSMutableArray+LinkBlock.m in Sources */,
 				A4C6757E210EF2880059E1DF /* DDYKeyboardTextView.m in Sources */,
 				A4C674E1210EE4FB0059E1DF /* UIView+LinkBlock.m in Sources */,
-				A4C674EA210EE4FB0059E1DF /* ViewController.m in Sources */,
 				A4C67576210EED810059E1DF /* ViewController+MASAdditions.m in Sources */,
 				A4C674D6210EE4FB0059E1DF /* UIButton+LinkBlock.m in Sources */,
 				A4C674B9210EE4FB0059E1DF /* UITextView+DDYExtension.m in Sources */,
 				A4C674CF210EE4FB0059E1DF /* LinkGroup.m in Sources */,
 				A4C674B8210EE4FB0059E1DF /* UITextField+DDYExtension.m in Sources */,
-				A4C674E4210EE4FB0059E1DF /* AppDelegate.m in Sources */,
 				A4C67419210EDDF80059E1DF /* AppDelegate.m in Sources */,
 				A4C67579210EED810059E1DF /* View+MASAdditions.m in Sources */,
 				A4C674DE210EE4FB0059E1DF /* UITableView+LinkBlock.m in Sources */,
@@ -791,10 +785,8 @@
 				A4C674D5210EE4FB0059E1DF /* UIBezierPath+LinkBlock.m in Sources */,
 				A4C674B6210EE4FB0059E1DF /* UIImage+DDYExtension.m in Sources */,
 				A4C674DC210EE4FB0059E1DF /* UIScrollView+LinkBlock.m in Sources */,
-				A4C674E6210EE4FB0059E1DF /* DDYTestNavigationVC.m in Sources */,
 				A4C674DF210EE4FB0059E1DF /* UITextField+LinkBlock.m in Sources */,
 				A4C674B3210EE4FB0059E1DF /* UIAlertView+DDYExtension.m in Sources */,
-				A4C674E8210EE4FB0059E1DF /* main.m in Sources */,
 				A4C674D7210EE4FB0059E1DF /* UIColor+LinkBlock.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -806,14 +798,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				A4C67405210EDDF80059E1DF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		A4C674A4210EE4FA0059E1DF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4C674A5210EE4FA0059E1DF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
