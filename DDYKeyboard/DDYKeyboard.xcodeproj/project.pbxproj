@@ -87,6 +87,7 @@
 		A4C6740B210EDDF80059E1DF /* DDYKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
+				A4C67413210EDDF80059E1DF /* DDYKeyboardView */,
 				A4C6740C210EDDF80059E1DF /* DDYKeyboardEmoji */,
 				A4C6740D210EDDF80059E1DF /* DDYKeyboardGif */,
 				A4C6740E210EDDF80059E1DF /* DDYKeyboardMore */,
@@ -94,7 +95,6 @@
 				A4C67410210EDDF80059E1DF /* DDYKeyboardRedEnvelope */,
 				A4C67411210EDDF80059E1DF /* DDYKeyboardShake */,
 				A4C67412210EDDF80059E1DF /* DDYKeyboardVideo */,
-				A4C67413210EDDF80059E1DF /* DDYKeyboardView */,
 				A4C67418210EDDF80059E1DF /* DDYKeyboardVoice */,
 			);
 			path = DDYKeyBoard;

@@ -2,11 +2,11 @@
 
 @implementation DDYKeyboardView
 
-+ (instancetype)keyboardWithType:(DDYKeyboardType)type {
-    return [[self alloc] initWithType:type];
++ (instancetype)keyboardWithType:(DDYKeyboardType)type allState:(DDYKeyboardState)allState {
+    return [[self alloc] initWithType:type allState:allState];
 }
 
-- (instancetype)initWithType:(DDYKeyboardType)type {
+- (instancetype)initWithType:(DDYKeyboardType)type allState:(DDYKeyboardState)allState {
     if (self = [super init]) {
         
     }
