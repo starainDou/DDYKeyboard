@@ -3,16 +3,18 @@
 @interface UIView (DDYExtension)
 
 #pragma mark - ---------------- 布局 ------------------
-@property (nonatomic, assign) CGFloat ddy_x;
-@property (nonatomic, assign) CGFloat ddy_y;
-@property (nonatomic, assign) CGFloat ddy_w;
-@property (nonatomic, assign) CGFloat ddy_h;
-@property (nonatomic, assign) CGFloat ddy_right;
-@property (nonatomic, assign) CGFloat ddy_bottom;
-@property (nonatomic, assign) CGFloat ddy_centerX;
-@property (nonatomic, assign) CGFloat ddy_centerY;
-@property (nonatomic, assign) CGSize  ddy_size;
-@property (nonatomic, assign) CGPoint ddy_origin;
+@property (nonatomic, assign) CGFloat ddy_X;
+@property (nonatomic, assign) CGFloat ddy_Y;
+@property (nonatomic, assign) CGFloat ddy_W;
+@property (nonatomic, assign) CGFloat ddy_H;
+@property (nonatomic, assign) CGFloat ddy_Left;
+@property (nonatomic, assign) CGFloat ddy_Right;
+@property (nonatomic, assign) CGFloat ddy_Top;
+@property (nonatomic, assign) CGFloat ddy_Bottom;
+@property (nonatomic, assign) CGFloat ddy_CenterX;
+@property (nonatomic, assign) CGFloat ddy_CenterY;
+@property (nonatomic, assign) CGSize  ddy_Size;
+@property (nonatomic, assign) CGPoint ddy_Origin;
 
 #pragma mark - ---------------- 手势 ------------------
 /** 点击手势 */
@@ -66,7 +68,5 @@
 @property (nonatomic, assign) BOOL isShowHitTestLog;
 
 #pragma mark - ---------------- 特效 ------------------
-/** 破碎效果 */
-- (void)ddy_CrushEffectWithCellWidth:(CGFloat)cellW;
 
 @end

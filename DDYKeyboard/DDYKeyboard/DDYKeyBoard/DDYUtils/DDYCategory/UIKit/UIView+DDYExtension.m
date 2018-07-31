@@ -22,113 +22,127 @@
 
 #pragma mark - 布局
 #pragma mark x的setter和getter方法
-- (void)setDdy_x:(CGFloat)ddy_x {
+- (void)setDdy_X:(CGFloat)ddy_X {
     CGRect frame = self.frame;
-    frame.origin.x = ddy_x;
+    frame.origin.x = ddy_X;
     self.frame = frame;
 }
 
-- (CGFloat)ddy_x {
+- (CGFloat)ddy_X {
     return self.frame.origin.x;
 }
 
+- (void)setDdy_Left:(CGFloat)ddy_Left {
+    [self setDdy_X:ddy_Left];
+}
+
+- (CGFloat)ddy_Left {
+    return [self ddy_X];
+}
+
 #pragma mark y的setter和getter方法
-- (void)setDdy_y:(CGFloat)ddy_y {
+- (void)setDdy_Y:(CGFloat)ddy_Y {
     CGRect frame = self.frame;
-    frame.origin.y = ddy_y;
+    frame.origin.y = ddy_Y;
     self.frame = frame;
 }
 
-- (CGFloat)ddy_y
-{
+- (CGFloat)ddy_Y {
     return self.frame.origin.y;
 }
 
+- (void)setDdy_Top:(CGFloat)ddy_Top {
+    [self setDdy_Y:ddy_Top];
+}
+
+- (CGFloat)ddy_Top {
+    return [self ddy_Y];
+}
+
 #pragma mark width的setter和getter方法
-- (void)setDdy_w:(CGFloat)ddy_w {
+- (void)setDdy_W:(CGFloat)ddy_W {
     CGRect frame = self.frame;
-    frame.size.width = ddy_w;
+    frame.size.width = ddy_W;
     self.frame = frame;
 }
 
-- (CGFloat)ddy_w {
+- (CGFloat)ddy_W {
     return self.frame.size.width;
 }
 
 #pragma mark height的setter和getter方法
-- (void)setDdy_h:(CGFloat)ddy_h {
+- (void)setDdy_H:(CGFloat)ddy_H {
     CGRect frame = self.frame;
-    frame.size.height = ddy_h;
+    frame.size.height = ddy_H;
     self.frame = frame;
 }
-- (CGFloat)ddy_h {
+- (CGFloat)ddy_H {
     return self.frame.size.height;
 }
 #pragma mark centerX的setter和getter方法
-- (void)setDdy_centerX:(CGFloat)ddy_centerX {
+- (void)setDdy_CenterX:(CGFloat)ddy_CenterX {
     CGPoint center = self.center;
-    center.x = ddy_centerX;
+    center.x = ddy_CenterX;
     self.center = center;
 }
 
-- (CGFloat)ddy_centerX {
+- (CGFloat)ddy_CenterX {
     return self.center.x;
 }
 
 #pragma mark centerY的setter和getter方法
-- (void)setDdy_centerY:(CGFloat)ddy_centerY {
+- (void)setDdy_CenterY:(CGFloat)ddy_CenterY {
     CGPoint center = self.center;
-    center.y = ddy_centerY;
+    center.y = ddy_CenterY;
     self.center = center;
 }
 
-- (CGFloat)ddy_centerY {
+- (CGFloat)ddy_CenterY {
     return self.center.y;
 }
 
 #pragma mark 右边到 x 轴距离
-- (void)setDdy_right:(CGFloat)ddy_right {
+- (void)setDdy_Right:(CGFloat)ddy_Right {
     CGRect frame = self.frame;
-    frame.origin.x = ddy_right - frame.size.width;
+    frame.origin.x = ddy_Right - frame.size.width;
     self.frame = frame;
 }
 
-- (CGFloat)ddy_right
+- (CGFloat)ddy_Right
 {
     return self.frame.origin.x + self.frame.size.width;
     
 }
 #pragma mark 底边到 y 轴距离
-- (void)setDdy_bottom:(CGFloat)ddy_bottom {
+- (void)setDdy_Bottom:(CGFloat)ddy_Bottom {
     CGRect frame = self.frame;
-    frame.origin.y = ddy_bottom - frame.size.height;
+    frame.origin.y = ddy_Bottom - frame.size.height;
     self.frame = frame;
 }
 
--(CGFloat)ddy_bottom {
+-(CGFloat)ddy_Bottom {
     return self.frame.origin.y + self.frame.size.height;
 }
 
 #pragma mark size的setter和getter方法
-- (void)setDdy_size:(CGSize)ddy_size {
+- (void)setDdy_Size:(CGSize)ddy_Size {
     CGRect frame = self.frame;
-    frame.size = ddy_size;
+    frame.size = ddy_Size;
     self.frame = frame;
 }
 
-- (CGSize)ddy_size
-{
+- (CGSize)ddy_Size {
     return self.frame.size;
 }
 
 #pragma mark origin的setter和getter方法
-- (void)setDdy_origin:(CGPoint)ddy_origin {
+- (void)setDdy_Origin:(CGPoint)ddy_Origin {
     CGRect frame = self.frame;
-    frame.origin = ddy_origin;
+    frame.origin = ddy_Origin;
     self.frame = frame;
 }
 
-- (CGPoint)ddy_origin {
+- (CGPoint)ddy_Origin {
     return self.frame.origin;
 }
 
@@ -398,15 +412,5 @@
     objc_setAssociatedObject(self, "ddyHitTestLogKey", number, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
-#pragma mark - 特效
-#pragma mark 破碎效果
-- (void)ddy_CrushEffectWithCellWidth:(CGFloat)cellW {
-    CGSize cellSize = CGSizeMake(cellW, cellW);
-    CGFloat cols = self.ddy_w / cellW;
-    CGFloat rows = self.ddy_h / cellW;
-    int fullCols = floorf(cols);
-    int fullRows = floorf(rows);
-
-}
 
 @end

@@ -1,15 +1,5 @@
 #import "DDYKeyboardView.h"
-#import "DDYMacrol.h"
-#import "UITextView+DDYExtension.h"
-#import "Masonry.h"
-
-// 输入框距顶部距离
-static CGFloat const textViewTop = 10.;
-// 按钮宽度
-static CGFloat const buttonW = 30.;
-// 按钮距输入框距离
-static CGFloat const buttonTop = 20.;
-
+#import "DDYKeyboardConfig.h"
 
 static inline NSString *imgName(NSString *imgName) {return [NSString stringWithFormat:@"DDYKeyboard.bundle/%@", imgName];}
 
@@ -199,21 +189,10 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     [super layoutSubviews];
     
     UIButton *currentButton = nil;
-    CGFloat buttonMargin = (DDYSCREENW - buttonW * self.buttonArray.count) / (self.buttonArray.count + 1.);
+    CGFloat buttonMargin = (DDYSCREENW - kbBarButtonWH * self.buttonArray.count) / (self.buttonArray.count + 1.);
     for (UIButton *button in self.buttonArray) {
-        if (currentButton) {
-            [button mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.textView.mas_bottom).offset(buttonTop);
-                make.width.height.mas_equalTo(30);
-                make.left.mas_equalTo(currentButton.mas_right).offset(buttonMargin);
-            }];
-        } else {
-            [button mas_remakeConstraints:^(MASConstraintMaker *make) {
-                make.top.equalTo(self.textView.mas_bottom).offset(buttonTop);
-                make.width.height.mas_equalTo(30);
-                make.left.mas_equalTo(self.mas_left).offset(buttonMargin);
-            }];
-        }
+        button.ddy_Top = self.textView.ddy_Bottom + kbBarButtonTop;
+        button.ddy_Left = (currentButton ? currentButton.ddy_Right : 0) + buttonMargin;
         currentButton = button;
     }
 }

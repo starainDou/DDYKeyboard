@@ -67,36 +67,36 @@
 }
 
 - (void)layoutHorizontalWithLeftView:(UIView *)leftView rightView:(UIView *)rightView {
-    CGFloat totalW = leftView.ddy_w + self.padding + rightView.ddy_w;
+    CGFloat totalW = leftView.ddy_W + self.padding + rightView.ddy_W;
     
-    leftView.ddy_x = (self.ddy_w - totalW)/2.0;
-    leftView.ddy_y = (self.ddy_h - leftView.ddy_h)/2.0;
-    rightView.ddy_x = leftView.ddy_right + self.padding;
-    rightView.ddy_y = (self.ddy_h - rightView.ddy_h)/2.0;
+    leftView.ddy_X = (self.ddy_W - totalW)/2.0;
+    leftView.ddy_Y = (self.ddy_H - leftView.ddy_H)/2.0;
+    rightView.ddy_X = leftView.ddy_Right + self.padding;
+    rightView.ddy_Y = (self.ddy_H - rightView.ddy_H)/2.0;
 }
 
 - (void)layoutVerticalWithUpView:(UIView *)upView downView:(UIView *)downView {
-    CGFloat totalH = upView.ddy_h + self.padding + downView.ddy_h;
+    CGFloat totalH = upView.ddy_H + self.padding + downView.ddy_H;
     
-    upView.ddy_x = (self.ddy_w - upView.ddy_w)/2.0;
-    upView.ddy_y = (self.ddy_h - totalH)/2.0;
-    downView.ddy_x = (self.ddy_w - downView.ddy_w)/2.0;
-    downView.ddy_y = upView.ddy_bottom + self.padding;
+    upView.ddy_X = (self.ddy_W - upView.ddy_W)/2.0;
+    upView.ddy_Y = (self.ddy_H - totalH)/2.0;
+    downView.ddy_X = (self.ddy_W - downView.ddy_W)/2.0;
+    downView.ddy_Y = upView.ddy_Bottom + self.padding;
 }
 
 - (void)layoutNaturalWithLeftView:(UIView *)leftView rightView:(UIView *)rightView {
-    leftView.ddy_x = 0;
-    rightView.ddy_right = self.ddy_w;
+    leftView.ddy_X = 0;
+    rightView.ddy_Right = self.ddy_W;
 }
 
 - (void)layoutLeftStyleWithLeftView:(UIView *)leftView rightView:(UIView *)rightView {
-    leftView.ddy_x = 0;
-    rightView.ddy_x = leftView.ddy_right + self.padding;
+    leftView.ddy_X = 0;
+    rightView.ddy_X = leftView.ddy_Right + self.padding;
 }
 
 - (void)layoutRightStyleWithLeftView:(UIView *)leftView rightView:(UIView *)rightView {
-    rightView.ddy_right = self.ddy_w;
-    leftView.ddy_right = rightView.ddy_x - self.padding;
+    rightView.ddy_Right = self.ddy_W;
+    leftView.ddy_Right = rightView.ddy_X - self.padding;
 }
 
 - (void)setBtnStyle:(DDYBtnStyle)btnStyle {
