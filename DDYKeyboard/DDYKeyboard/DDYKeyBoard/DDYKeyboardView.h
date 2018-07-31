@@ -5,6 +5,7 @@ typedef NS_ENUM(NSInteger, DDYKeyboardType) {
     DDYKeyboardTypeWechat,      // 仿微信键盘
 };
 
+// 仿QQ键盘模式各种状态
 typedef NS_OPTIONS(NSInteger, DDYKeyboardState) {
     DDYKeyboardStateNone        = 0,        // 注销状态
     DDYKeyboardStateSystem      = 1 << 0,   // 系统键盘
@@ -13,13 +14,13 @@ typedef NS_OPTIONS(NSInteger, DDYKeyboardState) {
     DDYKeyboardStateVideo       = 1 << 3,   // 相机状态
     DDYKeyboardStateShake       = 1 << 4,   // 窗口抖动
     DDYKeyboardStateGif         = 1 << 5,   // gif状态
-    DDYKeyboardStateRed         = 1 << 6,   // 红包模式
+    DDYKeyboardStateRedBag      = 1 << 6,   // 红包模式
     DDYKeyboardStateEmoji       = 1 << 7,   // 表情模式
     DDYKeyboardStateMore        = 1 << 8,   // 更多模式
     DDYKeyboardStateQuickSingle = DDYKeyboardStateVoice | DDYKeyboardStatePhoto | DDYKeyboardStateVideo | DDYKeyboardStateShake |
-                                  DDYKeyboardStateGif   | DDYKeyboardStateRed   | DDYKeyboardStateEmoji | DDYKeyboardStateMore,   // 单聊快速设置
+                                  DDYKeyboardStateGif   | DDYKeyboardStateRedBag| DDYKeyboardStateEmoji | DDYKeyboardStateMore,   // 单聊快速设置
     DDYKeyboardStateQuickGroup  = DDYKeyboardStateVoice | DDYKeyboardStatePhoto | DDYKeyboardStateVideo | DDYKeyboardStateGif   |
-                                  DDYKeyboardStateRed   | DDYKeyboardStateEmoji | DDYKeyboardStateMore,   // 群聊快速设置
+                                  DDYKeyboardStateRedBag| DDYKeyboardStateEmoji | DDYKeyboardStateMore,   // 群聊快速设置
 };
 
 @interface DDYKeyboardView : UIView

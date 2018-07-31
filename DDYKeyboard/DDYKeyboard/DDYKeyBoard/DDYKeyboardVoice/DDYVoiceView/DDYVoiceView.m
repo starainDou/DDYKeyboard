@@ -66,6 +66,9 @@
         
         // 标签指示
         [self addSubview:self.indicatorView];
+        
+        // 测试颜色
+        self.backgroundColor = DDYRandomColor;
     }
     return self;
 }

@@ -50,6 +50,17 @@
 }
 
 #pragma mark UITextViewDelegate
+#pragma mark 即将编辑
+- (BOOL)textViewShouldBeginEditing:(UITextView *)textView {
+    NSLog(@"即将编辑");
+    return YES;
+}
+
+#pragma mark 已经停止编辑
+- (void)textViewDidEndEditing:(UITextView *)textView {
+    NSLog(@"已经停止编辑");
+}
+
 #pragma mark 处理发送
 - (BOOL)textView:(UITextView *)textView shouldChangeTextInRange:(NSRange)range replacementText:(NSString *)text {
     if ([@"\n" isEqualToString:text]) {

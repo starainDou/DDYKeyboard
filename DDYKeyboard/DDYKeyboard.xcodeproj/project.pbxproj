@@ -13,12 +13,6 @@
 		A4C6741C210EDDF80059E1DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67407210EDDF80059E1DF /* main.m */; };
 		A4C6741D210EDDF80059E1DF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C67408210EDDF80059E1DF /* qrcode.png */; };
 		A4C6741E210EDDF80059E1DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6740A210EDDF80059E1DF /* ViewController.m */; };
-		A4C674B4210EE4FB0059E1DF /* UIButton+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67438210EE4FA0059E1DF /* UIButton+DDYExtension.m */; };
-		A4C674B5210EE4FB0059E1DF /* UIColor+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6743A210EE4FA0059E1DF /* UIColor+DDYExtension.m */; };
-		A4C674B6210EE4FB0059E1DF /* UIImage+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6743C210EE4FA0059E1DF /* UIImage+DDYExtension.m */; };
-		A4C674B9210EE4FB0059E1DF /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67442210EE4FA0059E1DF /* UITextView+DDYExtension.m */; };
-		A4C674BA210EE4FB0059E1DF /* UIView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67444210EE4FA0059E1DF /* UIView+DDYExtension.m */; };
-		A4C674BB210EE4FB0059E1DF /* UIViewController+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67446210EE4FA0059E1DF /* UIViewController+DDYExtension.m */; };
 		A4C6757E210EF2880059E1DF /* DDYKeyboardTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6757D210EF2880059E1DF /* DDYKeyboardTextView.m */; };
 		A4C67656210FEB890059E1DF /* DDYVoice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C67655210FEB890059E1DF /* DDYVoice.bundle */; };
 		A4C67659210FF1920059E1DF /* DDYVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67658210FF1920059E1DF /* DDYVoiceView.m */; };
@@ -30,10 +24,39 @@
 		A4C6767821103CBC0059E1DF /* DDYVoicePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767721103CBC0059E1DF /* DDYVoicePlayView.m */; };
 		A4C6767B21103F850059E1DF /* DDYKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767A21103F850059E1DF /* DDYKeyboardView.m */; };
 		A4C6767D2110409A0059E1DF /* DDYKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C6767C2110409A0059E1DF /* DDYKeyboard.bundle */; };
-		A4C6768621104E220059E1DF /* NSArray+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767E21104E210059E1DF /* NSArray+DDYExtension.m */; };
-		A4C6768721104E220059E1DF /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767F21104E210059E1DF /* NSString+DDYExtension.m */; };
-		A4C6768821104E220059E1DF /* NSTimer+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6768021104E220059E1DF /* NSTimer+DDYExtension.m */; };
-		A4C6768921104E220059E1DF /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A4C6768521104E220059E1DF /* keccak.c */; };
+		A4C676AB211070230059E1DF /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A4C6768E211070230059E1DF /* keccak.c */; };
+		A4C676AC211070230059E1DF /* NSArray+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67691211070230059E1DF /* NSArray+DDYExtension.m */; };
+		A4C676AD211070230059E1DF /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67693211070230059E1DF /* NSString+DDYExtension.m */; };
+		A4C676AE211070230059E1DF /* NSTimer+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67695211070230059E1DF /* NSTimer+DDYExtension.m */; };
+		A4C676AF211070230059E1DF /* UIButton+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67698211070230059E1DF /* UIButton+DDYExtension.m */; };
+		A4C676B0211070230059E1DF /* UIColor+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6769A211070230059E1DF /* UIColor+DDYExtension.m */; };
+		A4C676B1211070230059E1DF /* UIImage+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6769C211070230059E1DF /* UIImage+DDYExtension.m */; };
+		A4C676B2211070230059E1DF /* UITextView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6769E211070230059E1DF /* UITextView+DDYExtension.m */; };
+		A4C676B3211070230059E1DF /* UIView+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676A0211070230059E1DF /* UIView+DDYExtension.m */; };
+		A4C676B4211070230059E1DF /* UIViewController+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676A2211070230059E1DF /* UIViewController+DDYExtension.m */; };
+		A4C676CF2110702E0059E1DF /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676B72110702E0059E1DF /* MASCompositeConstraint.m */; };
+		A4C676D02110702E0059E1DF /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676BA2110702E0059E1DF /* MASConstraint.m */; };
+		A4C676D12110702E0059E1DF /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676BC2110702E0059E1DF /* MASConstraintMaker.m */; };
+		A4C676D22110702E0059E1DF /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676BE2110702E0059E1DF /* MASLayoutConstraint.m */; };
+		A4C676D32110702E0059E1DF /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676C22110702E0059E1DF /* MASViewAttribute.m */; };
+		A4C676D42110702E0059E1DF /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676C42110702E0059E1DF /* MASViewConstraint.m */; };
+		A4C676D52110702E0059E1DF /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676C62110702E0059E1DF /* NSArray+MASAdditions.m */; };
+		A4C676D62110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676C92110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		A4C676D72110702E0059E1DF /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676CB2110702E0059E1DF /* View+MASAdditions.m */; };
+		A4C676D82110702E0059E1DF /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676CE2110702E0059E1DF /* ViewController+MASAdditions.m */; };
+		A4C676DC211070400059E1DF /* DDYAuthorityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676DB211070400059E1DF /* DDYAuthorityManager.m */; };
+		A4C676F6211070760059E1DF /* DDYCamera.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C676ED211070760059E1DF /* DDYCamera.bundle */; };
+		A4C676F7211070760059E1DF /* DDYCameraController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676EF211070760059E1DF /* DDYCameraController.m */; };
+		A4C676F8211070760059E1DF /* DDYCameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676F1211070760059E1DF /* DDYCameraManager.m */; };
+		A4C676F9211070760059E1DF /* DDYCameraTool.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676F3211070760059E1DF /* DDYCameraTool.m */; };
+		A4C676FA211070760059E1DF /* DDYCameraView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676F5211070760059E1DF /* DDYCameraView.m */; };
+		A4C676FE211070B80059E1DF /* DDYVideoPlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676FD211070B80059E1DF /* DDYVideoPlayController.m */; };
+		A4C677012110748F0059E1DF /* DDYEmojiView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C677002110748F0059E1DF /* DDYEmojiView.m */; };
+		A4C67704211074A20059E1DF /* DDYGifView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67703211074A20059E1DF /* DDYGifView.m */; };
+		A4C67707211074B30059E1DF /* DDYMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67706211074B30059E1DF /* DDYMoreView.m */; };
+		A4C6770A211074C10059E1DF /* DDYPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67709211074C10059E1DF /* DDYPhotoView.m */; };
+		A4C6770D211074DF0059E1DF /* DDYRedBagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6770C211074DF0059E1DF /* DDYRedBagView.m */; };
+		A4C67710211075420059E1DF /* DDYShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6770F211075420059E1DF /* DDYShakeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,20 +69,6 @@
 		A4C67408210EDDF80059E1DF /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
 		A4C67409210EDDF80059E1DF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A4C6740A210EDDF80059E1DF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A4C67426210EE4FA0059E1DF /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
-		A4C67437210EE4FA0059E1DF /* UIButton+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C67438210EE4FA0059E1DF /* UIButton+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C67439210EE4FA0059E1DF /* UIColor+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C6743A210EE4FA0059E1DF /* UIColor+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C6743B210EE4FA0059E1DF /* UIImage+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C6743C210EE4FA0059E1DF /* UIImage+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C67441210EE4FA0059E1DF /* UITextView+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C67442210EE4FA0059E1DF /* UITextView+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C67443210EE4FA0059E1DF /* UIView+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C67444210EE4FA0059E1DF /* UIView+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C67445210EE4FA0059E1DF /* UIViewController+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C67446210EE4FA0059E1DF /* UIViewController+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C67448210EE4FA0059E1DF /* DDYMacrol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYMacrol.h; sourceTree = "<group>"; };
 		A4C6757C210EF2880059E1DF /* DDYKeyboardTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardTextView.h; sourceTree = "<group>"; };
 		A4C6757D210EF2880059E1DF /* DDYKeyboardTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYKeyboardTextView.m; sourceTree = "<group>"; };
 		A4C67655210FEB890059E1DF /* DDYVoice.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYVoice.bundle; sourceTree = "<group>"; };
@@ -81,14 +90,78 @@
 		A4C6767921103F850059E1DF /* DDYKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardView.h; sourceTree = "<group>"; };
 		A4C6767A21103F850059E1DF /* DDYKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYKeyboardView.m; sourceTree = "<group>"; };
 		A4C6767C2110409A0059E1DF /* DDYKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYKeyboard.bundle; sourceTree = "<group>"; };
-		A4C6767E21104E210059E1DF /* NSArray+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C6767F21104E210059E1DF /* NSString+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C6768021104E220059E1DF /* NSTimer+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+DDYExtension.m"; sourceTree = "<group>"; };
-		A4C6768121104E220059E1DF /* NSArray+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C6768221104E220059E1DF /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
-		A4C6768321104E220059E1DF /* NSString+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C6768421104E220059E1DF /* NSTimer+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C6768521104E220059E1DF /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
+		A4C6768C211070230059E1DF /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
+		A4C6768E211070230059E1DF /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
+		A4C6768F211070230059E1DF /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
+		A4C67690211070230059E1DF /* NSArray+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C67691211070230059E1DF /* NSArray+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C67692211070230059E1DF /* NSString+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C67693211070230059E1DF /* NSString+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C67694211070230059E1DF /* NSTimer+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C67695211070230059E1DF /* NSTimer+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C67697211070230059E1DF /* UIButton+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C67698211070230059E1DF /* UIButton+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C67699211070230059E1DF /* UIColor+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6769A211070230059E1DF /* UIColor+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6769B211070230059E1DF /* UIImage+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6769C211070230059E1DF /* UIImage+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6769D211070230059E1DF /* UITextView+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6769E211070230059E1DF /* UITextView+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6769F211070230059E1DF /* UIView+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C676A0211070230059E1DF /* UIView+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C676A1211070230059E1DF /* UIViewController+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C676A2211070230059E1DF /* UIViewController+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C676A4211070230059E1DF /* DDYMacrol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYMacrol.h; sourceTree = "<group>"; };
+		A4C676B62110702E0059E1DF /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		A4C676B72110702E0059E1DF /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		A4C676B82110702E0059E1DF /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		A4C676B92110702E0059E1DF /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		A4C676BA2110702E0059E1DF /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		A4C676BB2110702E0059E1DF /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		A4C676BC2110702E0059E1DF /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		A4C676BD2110702E0059E1DF /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		A4C676BE2110702E0059E1DF /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		A4C676BF2110702E0059E1DF /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		A4C676C02110702E0059E1DF /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		A4C676C12110702E0059E1DF /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		A4C676C22110702E0059E1DF /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		A4C676C32110702E0059E1DF /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		A4C676C42110702E0059E1DF /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		A4C676C52110702E0059E1DF /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		A4C676C62110702E0059E1DF /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		A4C676C72110702E0059E1DF /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A4C676C82110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		A4C676C92110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		A4C676CA2110702E0059E1DF /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		A4C676CB2110702E0059E1DF /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		A4C676CC2110702E0059E1DF /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		A4C676CD2110702E0059E1DF /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		A4C676CE2110702E0059E1DF /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		A4C676DA211070400059E1DF /* DDYAuthorityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYAuthorityManager.h; sourceTree = "<group>"; };
+		A4C676DB211070400059E1DF /* DDYAuthorityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYAuthorityManager.m; sourceTree = "<group>"; };
+		A4C676ED211070760059E1DF /* DDYCamera.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYCamera.bundle; sourceTree = "<group>"; };
+		A4C676EE211070760059E1DF /* DDYCameraController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCameraController.h; sourceTree = "<group>"; };
+		A4C676EF211070760059E1DF /* DDYCameraController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYCameraController.m; sourceTree = "<group>"; };
+		A4C676F0211070760059E1DF /* DDYCameraManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCameraManager.h; sourceTree = "<group>"; };
+		A4C676F1211070760059E1DF /* DDYCameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYCameraManager.m; sourceTree = "<group>"; };
+		A4C676F2211070760059E1DF /* DDYCameraTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCameraTool.h; sourceTree = "<group>"; };
+		A4C676F3211070760059E1DF /* DDYCameraTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYCameraTool.m; sourceTree = "<group>"; };
+		A4C676F4211070760059E1DF /* DDYCameraView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCameraView.h; sourceTree = "<group>"; };
+		A4C676F5211070760059E1DF /* DDYCameraView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYCameraView.m; sourceTree = "<group>"; };
+		A4C676FC211070B80059E1DF /* DDYVideoPlayController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYVideoPlayController.h; sourceTree = "<group>"; };
+		A4C676FD211070B80059E1DF /* DDYVideoPlayController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYVideoPlayController.m; sourceTree = "<group>"; };
+		A4C676FF2110748F0059E1DF /* DDYEmojiView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYEmojiView.h; sourceTree = "<group>"; };
+		A4C677002110748F0059E1DF /* DDYEmojiView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYEmojiView.m; sourceTree = "<group>"; };
+		A4C67702211074A20059E1DF /* DDYGifView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYGifView.h; sourceTree = "<group>"; };
+		A4C67703211074A20059E1DF /* DDYGifView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYGifView.m; sourceTree = "<group>"; };
+		A4C67705211074B30059E1DF /* DDYMoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYMoreView.h; sourceTree = "<group>"; };
+		A4C67706211074B30059E1DF /* DDYMoreView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYMoreView.m; sourceTree = "<group>"; };
+		A4C67708211074C10059E1DF /* DDYPhotoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYPhotoView.h; sourceTree = "<group>"; };
+		A4C67709211074C10059E1DF /* DDYPhotoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYPhotoView.m; sourceTree = "<group>"; };
+		A4C6770B211074DF0059E1DF /* DDYRedBagView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYRedBagView.h; sourceTree = "<group>"; };
+		A4C6770C211074DF0059E1DF /* DDYRedBagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYRedBagView.m; sourceTree = "<group>"; };
+		A4C6770E211075410059E1DF /* DDYShakeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYShakeView.h; sourceTree = "<group>"; };
+		A4C6770F211075420059E1DF /* DDYShakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYShakeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +194,11 @@
 		A4C673ED210EDD620059E1DF /* DDYKeyboard */ = {
 			isa = PBXGroup;
 			children = (
+				A4C676FB211070B70059E1DF /* DDYTempPlayer */,
+				A4C676EC211070760059E1DF /* DDYCameraManager */,
+				A4C676D9211070400059E1DF /* DDYAuthorityManager */,
+				A4C676B52110702E0059E1DF /* Masonry */,
+				A4C6768A211070230059E1DF /* DDYUtils */,
 				A4C6740B210EDDF80059E1DF /* DDYKeyBoard */,
 				A4C67401210EDDF80059E1DF /* System */,
 			);
@@ -154,10 +232,8 @@
 				A4C6740D210EDDF80059E1DF /* DDYKeyboardGif */,
 				A4C6740E210EDDF80059E1DF /* DDYKeyboardMore */,
 				A4C6740F210EDDF80059E1DF /* DDYKeyboardPhoto */,
-				A4C67410210EDDF80059E1DF /* DDYKeyboardRedEnvelope */,
+				A4C67410210EDDF80059E1DF /* DDYKeyboardRedBag */,
 				A4C67411210EDDF80059E1DF /* DDYKeyboardShake */,
-				A4C67412210EDDF80059E1DF /* DDYKeyboardVideo */,
-				A4C67424210EE4FA0059E1DF /* DDYUtils */,
 			);
 			path = DDYKeyBoard;
 			sourceTree = "<group>";
@@ -165,6 +241,8 @@
 		A4C6740C210EDDF80059E1DF /* DDYKeyboardEmoji */ = {
 			isa = PBXGroup;
 			children = (
+				A4C676FF2110748F0059E1DF /* DDYEmojiView.h */,
+				A4C677002110748F0059E1DF /* DDYEmojiView.m */,
 			);
 			path = DDYKeyboardEmoji;
 			sourceTree = "<group>";
@@ -172,6 +250,8 @@
 		A4C6740D210EDDF80059E1DF /* DDYKeyboardGif */ = {
 			isa = PBXGroup;
 			children = (
+				A4C67702211074A20059E1DF /* DDYGifView.h */,
+				A4C67703211074A20059E1DF /* DDYGifView.m */,
 			);
 			path = DDYKeyboardGif;
 			sourceTree = "<group>";
@@ -179,6 +259,8 @@
 		A4C6740E210EDDF80059E1DF /* DDYKeyboardMore */ = {
 			isa = PBXGroup;
 			children = (
+				A4C67705211074B30059E1DF /* DDYMoreView.h */,
+				A4C67706211074B30059E1DF /* DDYMoreView.m */,
 			);
 			path = DDYKeyboardMore;
 			sourceTree = "<group>";
@@ -186,29 +268,28 @@
 		A4C6740F210EDDF80059E1DF /* DDYKeyboardPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				A4C67708211074C10059E1DF /* DDYPhotoView.h */,
+				A4C67709211074C10059E1DF /* DDYPhotoView.m */,
 			);
 			path = DDYKeyboardPhoto;
 			sourceTree = "<group>";
 		};
-		A4C67410210EDDF80059E1DF /* DDYKeyboardRedEnvelope */ = {
+		A4C67410210EDDF80059E1DF /* DDYKeyboardRedBag */ = {
 			isa = PBXGroup;
 			children = (
+				A4C6770B211074DF0059E1DF /* DDYRedBagView.h */,
+				A4C6770C211074DF0059E1DF /* DDYRedBagView.m */,
 			);
-			path = DDYKeyboardRedEnvelope;
+			path = DDYKeyboardRedBag;
 			sourceTree = "<group>";
 		};
 		A4C67411210EDDF80059E1DF /* DDYKeyboardShake */ = {
 			isa = PBXGroup;
 			children = (
+				A4C6770E211075410059E1DF /* DDYShakeView.h */,
+				A4C6770F211075420059E1DF /* DDYShakeView.m */,
 			);
 			path = DDYKeyboardShake;
-			sourceTree = "<group>";
-		};
-		A4C67412210EDDF80059E1DF /* DDYKeyboardVideo */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DDYKeyboardVideo;
 			sourceTree = "<group>";
 		};
 		A4C67418210EDDF80059E1DF /* DDYKeyboardVoice */ = {
@@ -224,52 +305,6 @@
 				A4C67650210F27340059E1DF /* DDYVoiceView */,
 			);
 			path = DDYKeyboardVoice;
-			sourceTree = "<group>";
-		};
-		A4C67424210EE4FA0059E1DF /* DDYUtils */ = {
-			isa = PBXGroup;
-			children = (
-				A4C67425210EE4FA0059E1DF /* DDYCategory */,
-				A4C67447210EE4FA0059E1DF /* DDYTools */,
-			);
-			path = DDYUtils;
-			sourceTree = "<group>";
-		};
-		A4C67425210EE4FA0059E1DF /* DDYCategory */ = {
-			isa = PBXGroup;
-			children = (
-				A4C67426210EE4FA0059E1DF /* DDYCategoryHeader.h */,
-				A4C6766421100BFD0059E1DF /* Foundation */,
-				A4C67430210EE4FA0059E1DF /* UIKit */,
-			);
-			path = DDYCategory;
-			sourceTree = "<group>";
-		};
-		A4C67430210EE4FA0059E1DF /* UIKit */ = {
-			isa = PBXGroup;
-			children = (
-				A4C67437210EE4FA0059E1DF /* UIButton+DDYExtension.h */,
-				A4C67438210EE4FA0059E1DF /* UIButton+DDYExtension.m */,
-				A4C67439210EE4FA0059E1DF /* UIColor+DDYExtension.h */,
-				A4C6743A210EE4FA0059E1DF /* UIColor+DDYExtension.m */,
-				A4C6743B210EE4FA0059E1DF /* UIImage+DDYExtension.h */,
-				A4C6743C210EE4FA0059E1DF /* UIImage+DDYExtension.m */,
-				A4C67441210EE4FA0059E1DF /* UITextView+DDYExtension.h */,
-				A4C67442210EE4FA0059E1DF /* UITextView+DDYExtension.m */,
-				A4C67443210EE4FA0059E1DF /* UIView+DDYExtension.h */,
-				A4C67444210EE4FA0059E1DF /* UIView+DDYExtension.m */,
-				A4C67445210EE4FA0059E1DF /* UIViewController+DDYExtension.h */,
-				A4C67446210EE4FA0059E1DF /* UIViewController+DDYExtension.m */,
-			);
-			path = UIKit;
-			sourceTree = "<group>";
-		};
-		A4C67447210EE4FA0059E1DF /* DDYTools */ = {
-			isa = PBXGroup;
-			children = (
-				A4C67448210EE4FA0059E1DF /* DDYMacrol.h */,
-			);
-			path = DDYTools;
 			sourceTree = "<group>";
 		};
 		A4C6757B210EF23E0059E1DF /* DDYKeyboardTextView */ = {
@@ -344,21 +379,6 @@
 			path = DDYVoiceCustomView;
 			sourceTree = "<group>";
 		};
-		A4C6766421100BFD0059E1DF /* Foundation */ = {
-			isa = PBXGroup;
-			children = (
-				A4C6768521104E220059E1DF /* keccak.c */,
-				A4C6768221104E220059E1DF /* keccak.h */,
-				A4C6768121104E220059E1DF /* NSArray+DDYExtension.h */,
-				A4C6767E21104E210059E1DF /* NSArray+DDYExtension.m */,
-				A4C6768321104E220059E1DF /* NSString+DDYExtension.h */,
-				A4C6767F21104E210059E1DF /* NSString+DDYExtension.m */,
-				A4C6768421104E220059E1DF /* NSTimer+DDYExtension.h */,
-				A4C6768021104E220059E1DF /* NSTimer+DDYExtension.m */,
-			);
-			path = Foundation;
-			sourceTree = "<group>";
-		};
 		A4C6767521103C680059E1DF /* DDYVoicePlay */ = {
 			isa = PBXGroup;
 			children = (
@@ -366,6 +386,173 @@
 				A4C6767721103CBC0059E1DF /* DDYVoicePlayView.m */,
 			);
 			path = DDYVoicePlay;
+			sourceTree = "<group>";
+		};
+		A4C6768A211070230059E1DF /* DDYUtils */ = {
+			isa = PBXGroup;
+			children = (
+				A4C6768B211070230059E1DF /* DDYCategory */,
+				A4C676A3211070230059E1DF /* DDYTools */,
+				A4C676A5211070230059E1DF /* LinkBlockKit */,
+			);
+			path = DDYUtils;
+			sourceTree = "<group>";
+		};
+		A4C6768B211070230059E1DF /* DDYCategory */ = {
+			isa = PBXGroup;
+			children = (
+				A4C6768C211070230059E1DF /* DDYCategoryHeader.h */,
+				A4C6768D211070230059E1DF /* Foundation */,
+				A4C67696211070230059E1DF /* UIKit */,
+			);
+			path = DDYCategory;
+			sourceTree = "<group>";
+		};
+		A4C6768D211070230059E1DF /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A4C6768E211070230059E1DF /* keccak.c */,
+				A4C6768F211070230059E1DF /* keccak.h */,
+				A4C67690211070230059E1DF /* NSArray+DDYExtension.h */,
+				A4C67691211070230059E1DF /* NSArray+DDYExtension.m */,
+				A4C67692211070230059E1DF /* NSString+DDYExtension.h */,
+				A4C67693211070230059E1DF /* NSString+DDYExtension.m */,
+				A4C67694211070230059E1DF /* NSTimer+DDYExtension.h */,
+				A4C67695211070230059E1DF /* NSTimer+DDYExtension.m */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A4C67696211070230059E1DF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				A4C67697211070230059E1DF /* UIButton+DDYExtension.h */,
+				A4C67698211070230059E1DF /* UIButton+DDYExtension.m */,
+				A4C67699211070230059E1DF /* UIColor+DDYExtension.h */,
+				A4C6769A211070230059E1DF /* UIColor+DDYExtension.m */,
+				A4C6769B211070230059E1DF /* UIImage+DDYExtension.h */,
+				A4C6769C211070230059E1DF /* UIImage+DDYExtension.m */,
+				A4C6769D211070230059E1DF /* UITextView+DDYExtension.h */,
+				A4C6769E211070230059E1DF /* UITextView+DDYExtension.m */,
+				A4C6769F211070230059E1DF /* UIView+DDYExtension.h */,
+				A4C676A0211070230059E1DF /* UIView+DDYExtension.m */,
+				A4C676A1211070230059E1DF /* UIViewController+DDYExtension.h */,
+				A4C676A2211070230059E1DF /* UIViewController+DDYExtension.m */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A4C676A3211070230059E1DF /* DDYTools */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676A4211070230059E1DF /* DDYMacrol.h */,
+			);
+			path = DDYTools;
+			sourceTree = "<group>";
+		};
+		A4C676A5211070230059E1DF /* LinkBlockKit */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676A6211070230059E1DF /* Foundation */,
+				A4C676A8211070230059E1DF /* LinkInfo */,
+				A4C676A9211070230059E1DF /* UIKit */,
+			);
+			path = LinkBlockKit;
+			sourceTree = "<group>";
+		};
+		A4C676A6211070230059E1DF /* Foundation */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676A7211070230059E1DF /* JavaScriptCore */,
+			);
+			path = Foundation;
+			sourceTree = "<group>";
+		};
+		A4C676A7211070230059E1DF /* JavaScriptCore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = JavaScriptCore;
+			sourceTree = "<group>";
+		};
+		A4C676A8211070230059E1DF /* LinkInfo */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = LinkInfo;
+			sourceTree = "<group>";
+		};
+		A4C676A9211070230059E1DF /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
+		A4C676B52110702E0059E1DF /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676B62110702E0059E1DF /* MASCompositeConstraint.h */,
+				A4C676B72110702E0059E1DF /* MASCompositeConstraint.m */,
+				A4C676B82110702E0059E1DF /* MASConstraint+Private.h */,
+				A4C676B92110702E0059E1DF /* MASConstraint.h */,
+				A4C676BA2110702E0059E1DF /* MASConstraint.m */,
+				A4C676BB2110702E0059E1DF /* MASConstraintMaker.h */,
+				A4C676BC2110702E0059E1DF /* MASConstraintMaker.m */,
+				A4C676BD2110702E0059E1DF /* MASLayoutConstraint.h */,
+				A4C676BE2110702E0059E1DF /* MASLayoutConstraint.m */,
+				A4C676BF2110702E0059E1DF /* Masonry.h */,
+				A4C676C02110702E0059E1DF /* MASUtilities.h */,
+				A4C676C12110702E0059E1DF /* MASViewAttribute.h */,
+				A4C676C22110702E0059E1DF /* MASViewAttribute.m */,
+				A4C676C32110702E0059E1DF /* MASViewConstraint.h */,
+				A4C676C42110702E0059E1DF /* MASViewConstraint.m */,
+				A4C676C52110702E0059E1DF /* NSArray+MASAdditions.h */,
+				A4C676C62110702E0059E1DF /* NSArray+MASAdditions.m */,
+				A4C676C72110702E0059E1DF /* NSArray+MASShorthandAdditions.h */,
+				A4C676C82110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.h */,
+				A4C676C92110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.m */,
+				A4C676CA2110702E0059E1DF /* View+MASAdditions.h */,
+				A4C676CB2110702E0059E1DF /* View+MASAdditions.m */,
+				A4C676CC2110702E0059E1DF /* View+MASShorthandAdditions.h */,
+				A4C676CD2110702E0059E1DF /* ViewController+MASAdditions.h */,
+				A4C676CE2110702E0059E1DF /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+		A4C676D9211070400059E1DF /* DDYAuthorityManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676DA211070400059E1DF /* DDYAuthorityManager.h */,
+				A4C676DB211070400059E1DF /* DDYAuthorityManager.m */,
+			);
+			path = DDYAuthorityManager;
+			sourceTree = "<group>";
+		};
+		A4C676EC211070760059E1DF /* DDYCameraManager */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676ED211070760059E1DF /* DDYCamera.bundle */,
+				A4C676EE211070760059E1DF /* DDYCameraController.h */,
+				A4C676EF211070760059E1DF /* DDYCameraController.m */,
+				A4C676F0211070760059E1DF /* DDYCameraManager.h */,
+				A4C676F1211070760059E1DF /* DDYCameraManager.m */,
+				A4C676F2211070760059E1DF /* DDYCameraTool.h */,
+				A4C676F3211070760059E1DF /* DDYCameraTool.m */,
+				A4C676F4211070760059E1DF /* DDYCameraView.h */,
+				A4C676F5211070760059E1DF /* DDYCameraView.m */,
+			);
+			path = DDYCameraManager;
+			sourceTree = "<group>";
+		};
+		A4C676FB211070B70059E1DF /* DDYTempPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				A4C676FC211070B80059E1DF /* DDYVideoPlayController.h */,
+				A4C676FD211070B80059E1DF /* DDYVideoPlayController.m */,
+			);
+			path = DDYTempPlayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -429,6 +616,7 @@
 				A4C6767D2110409A0059E1DF /* DDYKeyboard.bundle in Resources */,
 				A4C6741B210EDDF80059E1DF /* Info.plist in Resources */,
 				A4C67656210FEB890059E1DF /* DDYVoice.bundle in Resources */,
+				A4C676F6211070760059E1DF /* DDYCamera.bundle in Resources */,
 				A4C6741A210EDDF80059E1DF /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,26 +629,48 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C6741E210EDDF80059E1DF /* ViewController.m in Sources */,
-				A4C6768921104E220059E1DF /* keccak.c in Sources */,
+				A4C67704211074A20059E1DF /* DDYGifView.m in Sources */,
+				A4C676CF2110702E0059E1DF /* MASCompositeConstraint.m in Sources */,
+				A4C677012110748F0059E1DF /* DDYEmojiView.m in Sources */,
+				A4C676D82110702E0059E1DF /* ViewController+MASAdditions.m in Sources */,
+				A4C676FE211070B80059E1DF /* DDYVideoPlayController.m in Sources */,
+				A4C676D72110702E0059E1DF /* View+MASAdditions.m in Sources */,
+				A4C676AF211070230059E1DF /* UIButton+DDYExtension.m in Sources */,
 				A4C6766D2110181D0059E1DF /* DDYVoiceStateView.m in Sources */,
-				A4C6768821104E220059E1DF /* NSTimer+DDYExtension.m in Sources */,
-				A4C674BA210EE4FB0059E1DF /* UIView+DDYExtension.m in Sources */,
-				A4C674B4210EE4FB0059E1DF /* UIButton+DDYExtension.m in Sources */,
-				A4C674B5210EE4FB0059E1DF /* UIColor+DDYExtension.m in Sources */,
 				A4C6767821103CBC0059E1DF /* DDYVoicePlayView.m in Sources */,
 				A4C6767B21103F850059E1DF /* DDYKeyboardView.m in Sources */,
-				A4C674BB210EE4FB0059E1DF /* UIViewController+DDYExtension.m in Sources */,
+				A4C676D22110702E0059E1DF /* MASLayoutConstraint.m in Sources */,
+				A4C676D52110702E0059E1DF /* NSArray+MASAdditions.m in Sources */,
+				A4C676FA211070760059E1DF /* DDYCameraView.m in Sources */,
 				A4C676732110364E0059E1DF /* DDYVoiceRecordView.m in Sources */,
 				A4C6766A2110147F0059E1DF /* DDYVoiceTalkView.m in Sources */,
+				A4C676D02110702E0059E1DF /* MASConstraint.m in Sources */,
 				A4C6741C210EDDF80059E1DF /* main.m in Sources */,
-				A4C6768621104E220059E1DF /* NSArray+DDYExtension.m in Sources */,
+				A4C676D42110702E0059E1DF /* MASViewConstraint.m in Sources */,
+				A4C676AB211070230059E1DF /* keccak.c in Sources */,
+				A4C676F7211070760059E1DF /* DDYCameraController.m in Sources */,
+				A4C67707211074B30059E1DF /* DDYMoreView.m in Sources */,
 				A4C6757E210EF2880059E1DF /* DDYKeyboardTextView.m in Sources */,
-				A4C674B9210EE4FB0059E1DF /* UITextView+DDYExtension.m in Sources */,
 				A4C67659210FF1920059E1DF /* DDYVoiceView.m in Sources */,
-				A4C6768721104E220059E1DF /* NSString+DDYExtension.m in Sources */,
+				A4C676D32110702E0059E1DF /* MASViewAttribute.m in Sources */,
+				A4C676B2211070230059E1DF /* UITextView+DDYExtension.m in Sources */,
+				A4C676AD211070230059E1DF /* NSString+DDYExtension.m in Sources */,
+				A4C676AC211070230059E1DF /* NSArray+DDYExtension.m in Sources */,
+				A4C676B3211070230059E1DF /* UIView+DDYExtension.m in Sources */,
+				A4C6770D211074DF0059E1DF /* DDYRedBagView.m in Sources */,
+				A4C676B0211070230059E1DF /* UIColor+DDYExtension.m in Sources */,
+				A4C676F8211070760059E1DF /* DDYCameraManager.m in Sources */,
+				A4C676B1211070230059E1DF /* UIImage+DDYExtension.m in Sources */,
+				A4C676DC211070400059E1DF /* DDYAuthorityManager.m in Sources */,
+				A4C676D62110702E0059E1DF /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				A4C676AE211070230059E1DF /* NSTimer+DDYExtension.m in Sources */,
+				A4C6770A211074C10059E1DF /* DDYPhotoView.m in Sources */,
+				A4C67710211075420059E1DF /* DDYShakeView.m in Sources */,
+				A4C676F9211070760059E1DF /* DDYCameraTool.m in Sources */,
+				A4C676B4211070230059E1DF /* UIViewController+DDYExtension.m in Sources */,
+				A4C676D12110702E0059E1DF /* MASConstraintMaker.m in Sources */,
 				A4C676702110361D0059E1DF /* DDYVoiceChangeView.m in Sources */,
 				A4C67419210EDDF80059E1DF /* AppDelegate.m in Sources */,
-				A4C674B6210EE4FB0059E1DF /* UIImage+DDYExtension.m in Sources */,
 				A4C676632110082C0059E1DF /* DDYVoiceIndicator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

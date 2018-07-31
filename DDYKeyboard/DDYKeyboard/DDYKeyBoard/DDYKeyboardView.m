@@ -1,6 +1,15 @@
 #import "DDYKeyboardView.h"
 #import "DDYKeyboardConfig.h"
 #import "DDYKeyboardTextView.h"
+#import "DDYCameraController.h"
+#import "DDYAuthorityManager.h"
+#import "DDYVoiceView.h"
+#import "DDYPhotoView.h"
+#import "DDYShakeView.h"
+#import "DDYRedBagView.h"
+#import "DDYGifView.h"
+#import "DDYEmojiView.h"
+#import "DDYMoreView.h"
 
 static inline NSString *imgName(NSString *imgName) {return [NSString stringWithFormat:@"DDYKeyboard.bundle/%@", imgName];}
 
@@ -15,9 +24,9 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 @property (nonatomic, strong) UIButton *currentButton;
 
 /** 语音视图 */
-@property (nonatomic, strong) UIView *voiceView;
+@property (nonatomic, strong) DDYVoiceView *voiceView;
 /** 相册视图 */
-@property (nonatomic, strong) UIView *photoView;
+@property (nonatomic, strong) DDYPhotoView *photoView;
 /** 相机视图 */
 @property (nonatomic, strong) UIView *videoView;
 /** 抖窗视图 */
@@ -69,6 +78,20 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     return _buttonArray;
 }
 
+- (DDYVoiceView *)voiceView {
+    if (!_voiceView) {
+        _voiceView = [DDYVoiceView voiceViewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _voiceView;
+}
+
+- (DDYPhotoView *)photoView {
+    if (!_photoView) {
+        _photoView = [DDYPhotoView voiceViewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _photoView;
+}
+
 + (instancetype)keyboardTypeQQAllState:(DDYKeyboardState)allState {
     return [[self alloc] initWithAllState:allState];
 }
@@ -102,8 +125,8 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     if (allState & DDYKeyboardStateGif) {
         [self.buttonArray addObject:[self buttonImg:imgName(@"gifN") selectedImg:imgName(@"gifS") tag:DDYKeyboardStateGif]];
     }
-    if (allState & DDYKeyboardStateRed) {
-        [self.buttonArray addObject:[self buttonImg:imgName(@"redN") selectedImg:imgName(@"redS") tag:DDYKeyboardStateRed]];
+    if (allState & DDYKeyboardStateRedBag) {
+        [self.buttonArray addObject:[self buttonImg:imgName(@"redN") selectedImg:imgName(@"redS") tag:DDYKeyboardStateRedBag]];
     }
     if (allState & DDYKeyboardStateEmoji) {
         [self.buttonArray addObject:[self buttonImg:imgName(@"emojiN") selectedImg:imgName(@"emojiS") tag:DDYKeyboardStateEmoji]];
@@ -119,6 +142,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     [button setImage:[UIImage imageNamed:imgS] forState:UIControlStateSelected];
     [button addTarget:self action:@selector(handleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:CGRectMake(0, 0, 30, 30)];
+    [button setTag:tag];
     [self addSubview:button];
     return button;
 }
@@ -139,16 +163,19 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     CGFloat keyboardH = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     
+    if (self.keyboardH != 0) {
+        self.ddy_Bottom = CGRectGetHeight(self.superview.bounds) - keyboardH;
+    }
     [UIView animateWithDuration:duration animations:^{
         self.ddy_Bottom = CGRectGetHeight(self.superview.bounds) - keyboardH;
     } completion:^(BOOL finished) {
-        self.keyboardH = keyboardH;
+        self.keyboardH = keyboardH;NSLog(@"键盘弹出 %f", keyboardH);
     }];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
-    
+    NSLog(@"键盘收回");
     [UIView animateWithDuration:duration animations:^{
         self.ddy_Bottom = self.superview.ddy_H - DDYSafeInsets(self.superview).bottom;
     } completion:^(BOOL finished) {
@@ -164,22 +191,29 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     switch (state) {
         case DDYKeyboardStateSystem:
         {
+            [self.textView becomeFirstResponder];
             self.textView.inputView = nil;
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateVoice:
         {
-            
+            [self.textView becomeFirstResponder];
+            self.textView.inputView = self.voiceView;
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStatePhoto:
         {
-            
+            [self.textView becomeFirstResponder];
+            self.textView.inputView = self.photoView;
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateVideo:
         {
-            
+            self.currentButton.selected = NO;
+            [self presentCameraViewController];
         }
             break;
         case DDYKeyboardStateGif:
@@ -192,7 +226,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
             
         }
             break;
-        case DDYKeyboardStateRed:
+        case DDYKeyboardStateRedBag:
         {
             
         }
@@ -210,20 +244,34 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
         case DDYKeyboardStateNone:
         default:
         {
-            
+            self.textView.inputView = nil;
+            [self.textView resignFirstResponder];
         }
             break;
     }
 }
 
 - (void)handleButtonClick:(UIButton *)button {
-    if (self.currentButton == button) {
+    if (self.currentButton == button && self.currentButton.selected) {
+        self.currentButton.selected = NO;
         return;
     }
     self.currentButton.selected = NO;
     self.currentButton = button;
     self.currentButton.selected = YES;
     [self changeKeyboardState:(DDYKeyboardState)button.tag];
+}
+
+- (void)presentCameraViewController {
+    [DDYAuthorityManager ddy_AudioAuthAlertShow:YES success:^{
+        [DDYAuthorityManager ddy_CameraAuthAlertShow:YES success:^{
+            DDYCameraController *cameraVC = [DDYCameraController new];
+            [cameraVC setTakePhotoBlock:^(UIImage *image, UIViewController *vc) {
+                [vc dismissViewControllerAnimated:YES completion:^{   }];
+            }];
+            [[self ddy_GetResponderViewController] presentViewController:cameraVC animated:YES completion:^{ }];
+        } fail:^(AVAuthorizationStatus authStatus) { }];
+    } fail:^(AVAuthorizationStatus authStatus) { }];
 }
 
 - (void)layoutSubviews {
@@ -250,6 +298,15 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     if (self.superview) {
         self.ddy_Bottom = self.superview.ddy_H - (self.keyboardH == 0 ? DDYSafeInsets(self.superview).bottom : self.keyboardH);
     }
+}
+
+#pragma mark - 响应链
+- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
+    UIView *view = [super hitTest:point withEvent:event];
+    if ([view isKindOfClass:[UITextView class]]) {
+        [self changeKeyboardState:DDYKeyboardStateSystem];
+    }
+    return view;
 }
 
 @end
