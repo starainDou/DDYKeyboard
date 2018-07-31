@@ -16,12 +16,17 @@ typedef NS_OPTIONS(NSInteger, DDYKeyboardState) {
     DDYKeyboardStateRed         = 1 << 6,   // 红包模式
     DDYKeyboardStateEmoji       = 1 << 7,   // 表情模式
     DDYKeyboardStateMore        = 1 << 8,   // 更多模式
+    DDYKeyboardStateQuickSingle = DDYKeyboardStateVoice | DDYKeyboardStatePhoto | DDYKeyboardStateVideo | DDYKeyboardStateShake |
+                                  DDYKeyboardStateGif   | DDYKeyboardStateRed   | DDYKeyboardStateEmoji | DDYKeyboardStateMore,   // 单聊快速设置
+    DDYKeyboardStateQuickGroup  = DDYKeyboardStateVoice | DDYKeyboardStatePhoto | DDYKeyboardStateVideo | DDYKeyboardStateGif   |
+                                  DDYKeyboardStateRed   | DDYKeyboardStateEmoji | DDYKeyboardStateMore,   // 群聊快速设置
 };
 
 @interface DDYKeyboardView : UIView
 
 @property (nonatomic, assign, readonly) DDYKeyboardState keyboardState;
 
-+ (instancetype)keyboardWithType:(DDYKeyboardType)type allState:(DDYKeyboardState)allState;
++ (instancetype)keyboardTypeQQAllState:(DDYKeyboardState)allState;
+
 
 @end

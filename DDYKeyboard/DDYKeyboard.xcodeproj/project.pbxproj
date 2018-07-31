@@ -13,7 +13,6 @@
 		A4C6741C210EDDF80059E1DF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67407210EDDF80059E1DF /* main.m */; };
 		A4C6741D210EDDF80059E1DF /* qrcode.png in Resources */ = {isa = PBXBuildFile; fileRef = A4C67408210EDDF80059E1DF /* qrcode.png */; };
 		A4C6741E210EDDF80059E1DF /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6740A210EDDF80059E1DF /* ViewController.m */; };
-		A4C6741F210EDDF80059E1DF /* DDYKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67415210EDDF80059E1DF /* DDYKeyboardView.m */; };
 		A4C674B4210EE4FB0059E1DF /* UIButton+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67438210EE4FA0059E1DF /* UIButton+DDYExtension.m */; };
 		A4C674B5210EE4FB0059E1DF /* UIColor+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6743A210EE4FA0059E1DF /* UIColor+DDYExtension.m */; };
 		A4C674B6210EE4FB0059E1DF /* UIImage+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6743C210EE4FA0059E1DF /* UIImage+DDYExtension.m */; };
@@ -24,12 +23,17 @@
 		A4C67656210FEB890059E1DF /* DDYVoice.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C67655210FEB890059E1DF /* DDYVoice.bundle */; };
 		A4C67659210FF1920059E1DF /* DDYVoiceView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67658210FF1920059E1DF /* DDYVoiceView.m */; };
 		A4C676632110082C0059E1DF /* DDYVoiceIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676622110082C0059E1DF /* DDYVoiceIndicator.m */; };
-		A4C6766721100C0D0059E1DF /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6766621100C0D0059E1DF /* NSString+DDYExtension.m */; };
 		A4C6766A2110147F0059E1DF /* DDYVoiceTalkView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676692110147F0059E1DF /* DDYVoiceTalkView.m */; };
 		A4C6766D2110181D0059E1DF /* DDYVoiceStateView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6766C2110181D0059E1DF /* DDYVoiceStateView.m */; };
 		A4C676702110361D0059E1DF /* DDYVoiceChangeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6766F2110361D0059E1DF /* DDYVoiceChangeView.m */; };
 		A4C676732110364E0059E1DF /* DDYVoiceRecordView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C676722110364E0059E1DF /* DDYVoiceRecordView.m */; };
 		A4C6767821103CBC0059E1DF /* DDYVoicePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767721103CBC0059E1DF /* DDYVoicePlayView.m */; };
+		A4C6767B21103F850059E1DF /* DDYKeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767A21103F850059E1DF /* DDYKeyboardView.m */; };
+		A4C6767D2110409A0059E1DF /* DDYKeyboard.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C6767C2110409A0059E1DF /* DDYKeyboard.bundle */; };
+		A4C6768621104E220059E1DF /* NSArray+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767E21104E210059E1DF /* NSArray+DDYExtension.m */; };
+		A4C6768721104E220059E1DF /* NSString+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6767F21104E210059E1DF /* NSString+DDYExtension.m */; };
+		A4C6768821104E220059E1DF /* NSTimer+DDYExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6768021104E220059E1DF /* NSTimer+DDYExtension.m */; };
+		A4C6768921104E220059E1DF /* keccak.c in Sources */ = {isa = PBXBuildFile; fileRef = A4C6768521104E220059E1DF /* keccak.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +46,6 @@
 		A4C67408210EDDF80059E1DF /* qrcode.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = qrcode.png; sourceTree = "<group>"; };
 		A4C67409210EDDF80059E1DF /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		A4C6740A210EDDF80059E1DF /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		A4C67414210EDDF80059E1DF /* DDYKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardView.h; sourceTree = "<group>"; };
-		A4C67415210EDDF80059E1DF /* DDYKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYKeyboardView.m; sourceTree = "<group>"; };
 		A4C67426210EE4FA0059E1DF /* DDYCategoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYCategoryHeader.h; sourceTree = "<group>"; };
 		A4C67437210EE4FA0059E1DF /* UIButton+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+DDYExtension.h"; sourceTree = "<group>"; };
 		A4C67438210EE4FA0059E1DF /* UIButton+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+DDYExtension.m"; sourceTree = "<group>"; };
@@ -66,8 +68,6 @@
 		A4C6765B210FF2780059E1DF /* DDYKeyboardConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardConfig.h; sourceTree = "<group>"; };
 		A4C676612110082B0059E1DF /* DDYVoiceIndicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYVoiceIndicator.h; sourceTree = "<group>"; };
 		A4C676622110082C0059E1DF /* DDYVoiceIndicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYVoiceIndicator.m; sourceTree = "<group>"; };
-		A4C6766521100C0C0059E1DF /* NSString+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYExtension.h"; sourceTree = "<group>"; };
-		A4C6766621100C0D0059E1DF /* NSString+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYExtension.m"; sourceTree = "<group>"; };
 		A4C676682110147F0059E1DF /* DDYVoiceTalkView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYVoiceTalkView.h; sourceTree = "<group>"; };
 		A4C676692110147F0059E1DF /* DDYVoiceTalkView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYVoiceTalkView.m; sourceTree = "<group>"; };
 		A4C6766B2110181D0059E1DF /* DDYVoiceStateView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYVoiceStateView.h; sourceTree = "<group>"; };
@@ -78,6 +78,17 @@
 		A4C676722110364E0059E1DF /* DDYVoiceRecordView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYVoiceRecordView.m; sourceTree = "<group>"; };
 		A4C6767621103CBC0059E1DF /* DDYVoicePlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYVoicePlayView.h; sourceTree = "<group>"; };
 		A4C6767721103CBC0059E1DF /* DDYVoicePlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYVoicePlayView.m; sourceTree = "<group>"; };
+		A4C6767921103F850059E1DF /* DDYKeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDYKeyboardView.h; sourceTree = "<group>"; };
+		A4C6767A21103F850059E1DF /* DDYKeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDYKeyboardView.m; sourceTree = "<group>"; };
+		A4C6767C2110409A0059E1DF /* DDYKeyboard.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYKeyboard.bundle; sourceTree = "<group>"; };
+		A4C6767E21104E210059E1DF /* NSArray+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6767F21104E210059E1DF /* NSString+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6768021104E220059E1DF /* NSTimer+DDYExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+DDYExtension.m"; sourceTree = "<group>"; };
+		A4C6768121104E220059E1DF /* NSArray+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6768221104E220059E1DF /* keccak.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keccak.h; sourceTree = "<group>"; };
+		A4C6768321104E220059E1DF /* NSString+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6768421104E220059E1DF /* NSTimer+DDYExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSTimer+DDYExtension.h"; sourceTree = "<group>"; };
+		A4C6768521104E220059E1DF /* keccak.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = keccak.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +145,9 @@
 		A4C6740B210EDDF80059E1DF /* DDYKeyBoard */ = {
 			isa = PBXGroup;
 			children = (
+				A4C6767921103F850059E1DF /* DDYKeyboardView.h */,
+				A4C6767A21103F850059E1DF /* DDYKeyboardView.m */,
 				A4C6765A210FF2400059E1DF /* DDYKeyboardConfig */,
-				A4C67413210EDDF80059E1DF /* DDYKeyboardView */,
 				A4C6757B210EF23E0059E1DF /* DDYKeyboardTextView */,
 				A4C67418210EDDF80059E1DF /* DDYKeyboardVoice */,
 				A4C6740C210EDDF80059E1DF /* DDYKeyboardEmoji */,
@@ -197,15 +209,6 @@
 			children = (
 			);
 			path = DDYKeyboardVideo;
-			sourceTree = "<group>";
-		};
-		A4C67413210EDDF80059E1DF /* DDYKeyboardView */ = {
-			isa = PBXGroup;
-			children = (
-				A4C67414210EDDF80059E1DF /* DDYKeyboardView.h */,
-				A4C67415210EDDF80059E1DF /* DDYKeyboardView.m */,
-			);
-			path = DDYKeyboardView;
 			sourceTree = "<group>";
 		};
 		A4C67418210EDDF80059E1DF /* DDYKeyboardVoice */ = {
@@ -325,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				A4C6765B210FF2780059E1DF /* DDYKeyboardConfig.h */,
+				A4C6767C2110409A0059E1DF /* DDYKeyboard.bundle */,
 			);
 			path = DDYKeyboardConfig;
 			sourceTree = "<group>";
@@ -343,8 +347,14 @@
 		A4C6766421100BFD0059E1DF /* Foundation */ = {
 			isa = PBXGroup;
 			children = (
-				A4C6766521100C0C0059E1DF /* NSString+DDYExtension.h */,
-				A4C6766621100C0D0059E1DF /* NSString+DDYExtension.m */,
+				A4C6768521104E220059E1DF /* keccak.c */,
+				A4C6768221104E220059E1DF /* keccak.h */,
+				A4C6768121104E220059E1DF /* NSArray+DDYExtension.h */,
+				A4C6767E21104E210059E1DF /* NSArray+DDYExtension.m */,
+				A4C6768321104E220059E1DF /* NSString+DDYExtension.h */,
+				A4C6767F21104E210059E1DF /* NSString+DDYExtension.m */,
+				A4C6768421104E220059E1DF /* NSTimer+DDYExtension.h */,
+				A4C6768021104E220059E1DF /* NSTimer+DDYExtension.m */,
 			);
 			path = Foundation;
 			sourceTree = "<group>";
@@ -416,6 +426,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C6741D210EDDF80059E1DF /* qrcode.png in Resources */,
+				A4C6767D2110409A0059E1DF /* DDYKeyboard.bundle in Resources */,
 				A4C6741B210EDDF80059E1DF /* Info.plist in Resources */,
 				A4C67656210FEB890059E1DF /* DDYVoice.bundle in Resources */,
 				A4C6741A210EDDF80059E1DF /* LaunchScreen.storyboard in Resources */,
@@ -430,20 +441,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4C6741E210EDDF80059E1DF /* ViewController.m in Sources */,
+				A4C6768921104E220059E1DF /* keccak.c in Sources */,
 				A4C6766D2110181D0059E1DF /* DDYVoiceStateView.m in Sources */,
+				A4C6768821104E220059E1DF /* NSTimer+DDYExtension.m in Sources */,
 				A4C674BA210EE4FB0059E1DF /* UIView+DDYExtension.m in Sources */,
 				A4C674B4210EE4FB0059E1DF /* UIButton+DDYExtension.m in Sources */,
 				A4C674B5210EE4FB0059E1DF /* UIColor+DDYExtension.m in Sources */,
 				A4C6767821103CBC0059E1DF /* DDYVoicePlayView.m in Sources */,
+				A4C6767B21103F850059E1DF /* DDYKeyboardView.m in Sources */,
 				A4C674BB210EE4FB0059E1DF /* UIViewController+DDYExtension.m in Sources */,
 				A4C676732110364E0059E1DF /* DDYVoiceRecordView.m in Sources */,
-				A4C6766721100C0D0059E1DF /* NSString+DDYExtension.m in Sources */,
 				A4C6766A2110147F0059E1DF /* DDYVoiceTalkView.m in Sources */,
-				A4C6741F210EDDF80059E1DF /* DDYKeyboardView.m in Sources */,
 				A4C6741C210EDDF80059E1DF /* main.m in Sources */,
+				A4C6768621104E220059E1DF /* NSArray+DDYExtension.m in Sources */,
 				A4C6757E210EF2880059E1DF /* DDYKeyboardTextView.m in Sources */,
 				A4C674B9210EE4FB0059E1DF /* UITextView+DDYExtension.m in Sources */,
 				A4C67659210FF1920059E1DF /* DDYVoiceView.m in Sources */,
+				A4C6768721104E220059E1DF /* NSString+DDYExtension.m in Sources */,
 				A4C676702110361D0059E1DF /* DDYVoiceChangeView.m in Sources */,
 				A4C67419210EDDF80059E1DF /* AppDelegate.m in Sources */,
 				A4C674B6210EE4FB0059E1DF /* UIImage+DDYExtension.m in Sources */,

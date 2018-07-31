@@ -4,6 +4,7 @@
 #import "DDYVoiceChangeView.h"
 #import "DDYVoiceTalkView.h"
 #import "DDYVoiceRecordView.h"
+#import "DDYVoicePlayView.h"
 
 @interface DDYVoiceView ()<UIScrollViewDelegate>
 /** 滚动视图 */
@@ -17,6 +18,7 @@
 /** 标签视图 */
 @property (nonatomic, strong) DDYVoiceIndicator *indicatorView;
 /** 播放视图 */
+@property (nonatomic, strong) DDYVoicePlayView *playView;
 
 @end
 

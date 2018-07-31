@@ -17,6 +17,8 @@
 #define DDYNAVBARH self.navigationController.navigationBar.bounds.size.height
 // 获取状态条高度 iPhoneX 44 其他20 有后台(比如后台音乐)+20
 #define DDYstatusH [[UIApplication sharedApplication] statusBarFrame].size.height
+// 安全区域
+#define DDYSafeInsets(view) ({ UIEdgeInsets i; if (@available(iOS 11.0, *)) { i = view.safeAreaInsets; } else { i = UIEdgeInsetsZero; } i; })
 
 // 是否竖屏 BOOL
 #define DDYPortrait (self.traitCollection.horizontalSizeClass == UIUserInterfaceSizeClassCompact && self.traitCollection.verticalSizeClass == UIUserInterfaceSizeClassRegular)

@@ -1,11 +1,13 @@
 #import "DDYKeyboardView.h"
 #import "DDYKeyboardConfig.h"
+#import "DDYKeyboardTextView.h"
 
 static inline NSString *imgName(NSString *imgName) {return [NSString stringWithFormat:@"DDYKeyboard.bundle/%@", imgName];}
 
 @interface DDYKeyboardView ()
 /** 输入框 */
-@property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) DDYKeyboardTextView *textView;
+
 /** 语音按钮 */
 @property (nonatomic, strong) UIButton *voiceButton;
 /** 相册按钮 */
@@ -41,10 +43,24 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 @property (nonatomic, strong) UIView *emojiView;
 /** 更多视图 */
 @property (nonatomic, strong) UIView *moreView;
+/** 键盘高度 */
+@property (nonatomic, assign) CGFloat keyboardH;
 
 @end
 
 @implementation DDYKeyboardView
+
+- (DDYKeyboardTextView *)textView {
+    if (!_textView) {
+        _textView = [DDYKeyboardTextView viewWithFrame:CGRectMake(kbTextViewMargin, kbTextViewTop, DDYSCREENW-2*kbTextViewMargin, kbTextViewH)];
+        __weak __typeof (self)weakSelf = self;
+        [_textView setAutoHeightBlock:^(CGFloat height) {
+            __strong __typeof (weakSelf)strongSelf = weakSelf;
+            [strongSelf layoutIfNeeded];
+        }];
+    }
+    return _textView;
+}
 
 - (NSMutableArray *)buttonArray {
     if (!_buttonArray) {
@@ -53,13 +69,17 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     return _buttonArray;
 }
 
-+ (instancetype)keyboardWithType:(DDYKeyboardType)type allState:(DDYKeyboardState)allState {
-    return [[self alloc] initWithType:type allState:allState];
++ (instancetype)keyboardTypeQQAllState:(DDYKeyboardState)allState {
+    return [[self alloc] initWithAllState:allState];
 }
 
-- (instancetype)initWithType:(DDYKeyboardType)type allState:(DDYKeyboardState)allState {
+- (instancetype)initWithAllState:(DDYKeyboardState)allState {
     if (self = [super init]) {
-        
+        [self addSubview:self.textView];
+        [self layoutButtonWithAllState:allState];
+        [self layoutIfNeeded];
+        [self addNotification];
+        self.backgroundColor = DDYRGBA(250., 250., 250., 1.);
     }
     return self;
 }
@@ -98,6 +118,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     [button setImage:[UIImage imageNamed:imgS] forState:UIControlStateSelected];
     [button addTarget:self action:@selector(handleButtonClick:) forControlEvents:UIControlEventTouchUpInside];
     [button setFrame:CGRectMake(0, 0, 30, 30)];
+    [self addSubview:button];
     return button;
 }
 
@@ -114,11 +135,24 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 
 #pragma mark - KeyboardNotification
 - (void)keyboardWillShow:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
+    CGFloat keyboardH = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
     
+    [UIView animateWithDuration:duration animations:^{
+        self.ddy_Bottom = CGRectGetHeight(self.superview.bounds) - keyboardH;
+    } completion:^(BOOL finished) {
+        self.keyboardH = keyboardH;
+    }];
 }
 
 - (void)keyboardWillHide:(NSNotification *)notification {
+    NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     
+    [UIView animateWithDuration:duration animations:^{
+        self.ddy_Bottom = self.superview.ddy_H - DDYSafeInsets(self.superview).bottom;
+    } completion:^(BOOL finished) {
+        self.keyboardH = 0;
+    }];
 }
 
 - (void)changeKeyboardState:(DDYKeyboardState)state {
@@ -189,11 +223,16 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     [super layoutSubviews];
     
     UIButton *currentButton = nil;
-    CGFloat buttonMargin = (DDYSCREENW - kbBarButtonWH * self.buttonArray.count) / (self.buttonArray.count + 1.);
+    CGFloat buttonMargin = (DDYSCREENW - kbButtonWH * self.buttonArray.count) / (self.buttonArray.count + 1.);
     for (UIButton *button in self.buttonArray) {
-        button.ddy_Top = self.textView.ddy_Bottom + kbBarButtonTop;
+        button.ddy_Top = self.textView.ddy_Bottom + kbButtonTop;
         button.ddy_Left = (currentButton ? currentButton.ddy_Right : 0) + buttonMargin;
         currentButton = button;
+    }
+    
+    self.ddy_H = kbTextViewTop + self.textView.ddy_H + kbButtonTop + kbButtonWH + kbButtonBottom;
+    if (self.superview) {
+        self.ddy_Bottom = self.superview.ddy_H - (self.keyboardH == 0 ? DDYSafeInsets(self.superview).bottom : self.keyboardH);
     }
 }
 

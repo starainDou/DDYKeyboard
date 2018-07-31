@@ -1,16 +1,20 @@
 #import "DDYMacrol.h"
 #import "DDYCategoryHeader.h"
 
+// 输入框字号
+#define kbTextViewFont 15
 // 输入框距顶部距离
-#define kbBarTextViewTop 10
+#define kbTextViewTop 10
+// 输入框距左右距离
+#define kbTextViewMargin 10
 // 输入框默认高度
-#define kbBarTextViewH 30
+#define kbTextViewH 30
 // 按钮宽高
-#define kbBarButtonWH 30
+#define kbButtonWH 30
 // 按钮距输入框距离
-#define kbBarButtonTop 20
+#define kbButtonTop 20
 // 按钮距底部距离
-#define kbBarButtonBottom 10
+#define kbButtonBottom 10
 // 常驻bar高度自动计算 H textViewTop + 输入框高度(可变) + buttonTop + buttonWH + buttonBottom
 
 // 功能实现区域(textView.inputView)高度

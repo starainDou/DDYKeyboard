@@ -30,7 +30,6 @@
                                                self.textContainerInset.top,
                                                self.bounds.size.width - self.textContainerInset.left - self.textContainerInset.right,
                                                self.bounds.size.height - self.textContainerInset.top - self.textContainerInset.bottom)];
-    [self.placeholderLabel sizeToFit];
 }
 
 #pragma mark 添加给系统属性 _placeholderLabel 在iOS8.3以上版本才有
