@@ -4,28 +4,15 @@
 
 static inline NSString *imgName(NSString *imgName) {return [NSString stringWithFormat:@"DDYKeyboard.bundle/%@", imgName];}
 
-@interface DDYKeyboardView ()
+@interface DDYKeyboardView ()<UITextViewDelegate>
 /** 输入框 */
 @property (nonatomic, strong) DDYKeyboardTextView *textView;
-
-/** 语音按钮 */
-@property (nonatomic, strong) UIButton *voiceButton;
-/** 相册按钮 */
-@property (nonatomic, strong) UIButton *photoButton;
-/** 相机按钮 */
-@property (nonatomic, strong) UIButton *videoButton;
-/** 抖窗按钮 */
-@property (nonatomic, strong) UIButton *shakeButton;
-/** gif按钮 */
-@property (nonatomic, strong) UIButton *gifButton;
-/** 红包按钮 */
-@property (nonatomic, strong) UIButton *redButton;
-/** 表情按钮 */
-@property (nonatomic, strong) UIButton *emojiButton;
-/** 更多按钮 */
-@property (nonatomic, strong) UIButton *moreButton;
+/** 输入框背景视图 */
+@property (nonatomic, strong) UIImageView *textBgView;
 /** 按钮数组 */
 @property (nonatomic, strong) NSMutableArray *buttonArray;
+/** 当前选择的按钮 */
+@property (nonatomic, strong) UIButton *currentButton;
 
 /** 语音视图 */
 @property (nonatomic, strong) UIView *voiceView;
@@ -52,14 +39,27 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 
 - (DDYKeyboardTextView *)textView {
     if (!_textView) {
-        _textView = [DDYKeyboardTextView viewWithFrame:CGRectMake(kbTextViewMargin, kbTextViewTop, DDYSCREENW-2*kbTextViewMargin, kbTextViewH)];
+        _textView = [DDYKeyboardTextView viewWithFrame:CGRectMake(0, (kbTextViewH-20)/2., self.textBgView.ddy_W, 20)];
+        
         __weak __typeof (self)weakSelf = self;
         [_textView setAutoHeightBlock:^(CGFloat height) {
             __strong __typeof (weakSelf)strongSelf = weakSelf;
+            [strongSelf setNeedsLayout];
             [strongSelf layoutIfNeeded];
         }];
     }
     return _textView;
+}
+
+- (UIImageView *)textBgView {
+    if (!_textBgView) {
+        _textBgView = [[UIImageView alloc] initWithFrame:CGRectMake(kbTextViewMargin, kbTextViewTop, DDYSCREENW-2*kbTextViewMargin, kbTextViewH)];
+        _textBgView.layer.borderColor = DDY_Small_Black.CGColor;
+        _textBgView.layer.borderWidth = 0.6;
+        _textBgView.backgroundColor = [UIColor whiteColor];
+        _textBgView.userInteractionEnabled = YES;
+    }
+    return _textBgView;
 }
 
 - (NSMutableArray *)buttonArray {
@@ -75,7 +75,8 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 
 - (instancetype)initWithAllState:(DDYKeyboardState)allState {
     if (self = [super init]) {
-        [self addSubview:self.textView];
+        [self addSubview:self.textBgView];
+        [self.textBgView addSubview:self.textView];
         [self layoutButtonWithAllState:allState];
         [self layoutIfNeeded];
         [self addNotification];
@@ -163,7 +164,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     switch (state) {
         case DDYKeyboardStateSystem:
         {
-            
+            self.textView.inputView = nil;
         }
             break;
         case DDYKeyboardStateVoice:
@@ -216,12 +217,26 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 }
 
 - (void)handleButtonClick:(UIButton *)button {
-    
+    if (self.currentButton == button) {
+        return;
+    }
+    self.currentButton.selected = NO;
+    self.currentButton = button;
+    self.currentButton.selected = YES;
+    [self changeKeyboardState:(DDYKeyboardState)button.tag];
 }
 
 - (void)layoutSubviews {
     [super layoutSubviews];
+    // 输入框布局
+    if (self.textView.ddy_H + 6 > kbTextViewH) {
+        self.textBgView.ddy_H = self.textView.ddy_H + 6;
+    } else {
+        self.textBgView.ddy_H = kbTextViewH;
+    }
+    self.textView.ddy_CenterY = self.textBgView.ddy_H/2.;
     
+    // 按钮布局
     UIButton *currentButton = nil;
     CGFloat buttonMargin = (DDYSCREENW - kbButtonWH * self.buttonArray.count) / (self.buttonArray.count + 1.);
     for (UIButton *button in self.buttonArray) {
@@ -230,6 +245,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
         currentButton = button;
     }
     
+    // 整体高度
     self.ddy_H = kbTextViewTop + self.textView.ddy_H + kbButtonTop + kbButtonWH + kbButtonBottom;
     if (self.superview) {
         self.ddy_Bottom = self.superview.ddy_H - (self.keyboardH == 0 ? DDYSafeInsets(self.superview).bottom : self.keyboardH);

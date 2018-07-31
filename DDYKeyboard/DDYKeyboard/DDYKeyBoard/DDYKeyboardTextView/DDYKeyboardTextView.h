@@ -1,8 +1,6 @@
 #import <UIKit/UIKit.h>
 
-@interface DDYKeyboardTextView : UIImageView
-
-@property (nonatomic, copy) void (^autoHeightBlock)(CGFloat height);
+@interface DDYKeyboardTextView : UITextView
 
 @property (nonatomic, copy) void (^sendBlock)(UITextView *textView);
 
