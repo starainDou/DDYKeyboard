@@ -101,7 +101,7 @@
         
         CGRect rectInCell = [self.imageView convertRect:self.imageView.bounds toView:self.contentView];
         
-        if (fabs(rectInCell.origin.y)>self.ddy_H/2 && self.swipeToSendBlock) {
+        if (-rectInCell.origin.y>self.ddy_H/2 && self.swipeToSendBlock) {
             self.swipeToSendBlock(self.photoModel);
         }
         [self.contentView addSubview:self.imageView];
