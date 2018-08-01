@@ -140,7 +140,7 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
     return _settingButton;
 }
 
-+ (instancetype)voiceViewWithFrame:(CGRect)frame {
++ (instancetype)viewWithFrame:(CGRect)frame {
     return [[self alloc] initWithFrame:frame];
 }
 

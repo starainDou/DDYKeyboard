@@ -2,4 +2,6 @@
 
 @interface DDYEmojiView : UIView
 
++ (instancetype)viewWithFrame:(CGRect)frame;
+
 @end

@@ -27,18 +27,18 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 @property (nonatomic, strong) DDYVoiceView *voiceView;
 /** 相册视图 */
 @property (nonatomic, strong) DDYPhotoView *photoView;
-/** 相机视图 */
-@property (nonatomic, strong) UIView *videoView;
+/** 相机控制器 */
+@property (nonatomic, strong) DDYCameraController *cameraViewController;
 /** 抖窗视图 */
-@property (nonatomic, strong) UIView *shakeView;
+@property (nonatomic, strong) DDYShakeView *shakeView;
 /** gif视图 */
-@property (nonatomic, strong) UIView *gifView;
+@property (nonatomic, strong) DDYGifView *gifView;
 /** 红包视图 */
-@property (nonatomic, strong) UIView *redView;
+@property (nonatomic, strong) DDYRedBagView *redBagView;
 /** 表情视图 */
-@property (nonatomic, strong) UIView *emojiView;
+@property (nonatomic, strong) DDYEmojiView *emojiView;
 /** 更多视图 */
-@property (nonatomic, strong) UIView *moreView;
+@property (nonatomic, strong) DDYMoreView *moreView;
 /** 键盘高度 */
 @property (nonatomic, assign) CGFloat keyboardH;
 
@@ -80,14 +80,14 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 
 - (DDYVoiceView *)voiceView {
     if (!_voiceView) {
-        _voiceView = [DDYVoiceView voiceViewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+        _voiceView = [DDYVoiceView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
     }
     return _voiceView;
 }
 
 - (DDYPhotoView *)photoView {
     if (!_photoView) {
-        _photoView = [DDYPhotoView voiceViewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+        _photoView = [DDYPhotoView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
         [_photoView setAlbumBlock:^{
             NSLog(@"点击相册");
         }];
@@ -100,6 +100,52 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     }
     return _photoView;
 }
+
+- (DDYCameraController *)cameraViewController {
+    if (!_cameraViewController) {
+        _cameraViewController = [DDYCameraController new];
+        [_cameraViewController setTakePhotoBlock:^(UIImage *image, UIViewController *vc) {
+            [vc dismissViewControllerAnimated:YES completion:^{   }];
+        }];
+    }
+    return _cameraViewController;
+}
+
+- (DDYShakeView *)shakeView {
+    if (!_shakeView) {
+        _shakeView = [DDYShakeView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _shakeView;
+}
+
+- (DDYGifView *)gifView {
+    if (!_gifView) {
+        _gifView = [DDYGifView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _gifView;
+}
+
+- (DDYRedBagView *)redBagView {
+    if (!_redBagView) {
+        _redBagView = [DDYRedBagView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _redBagView;
+}
+
+- (DDYEmojiView *)emojiView {
+    if (!_emojiView) {
+        _emojiView = [DDYEmojiView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _emojiView;
+}
+
+- (DDYMoreView *)moreView {
+    if (!_moreView) {
+        _moreView = [DDYMoreView viewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+    }
+    return _moreView;
+}
+
 
 + (instancetype)keyboardTypeQQAllState:(DDYKeyboardState)allState {
     return [[self alloc] initWithAllState:allState];
@@ -224,31 +270,42 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
         {
             self.currentButton.selected = NO;
             [self presentCameraViewController];
-        }
-            break;
-        case DDYKeyboardStateGif:
-        {
-            
+            [self.textView resignFirstResponder];
         }
             break;
         case DDYKeyboardStateShake:
         {
-            
+            [self.textView becomeFirstResponder];
+            [self.textView setInputView:self.shakeView];
+            [self.textView reloadInputViews];
+        }
+            break;
+        case DDYKeyboardStateGif:
+        {
+            [self.textView becomeFirstResponder];
+            [self.textView setInputView:self.gifView];
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateRedBag:
         {
-            
+            [self.textView becomeFirstResponder];
+            [self.textView setInputView:self.redBagView];
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateEmoji:
         {
-            
+            [self.textView becomeFirstResponder];
+            [self.textView setInputView:self.emojiView];
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateMore:
         {
-            
+            [self.textView becomeFirstResponder];
+            [self.textView setInputView:self.moreView];
+            [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateNone:
@@ -276,11 +333,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 - (void)presentCameraViewController {
     [DDYAuthorityManager ddy_AudioAuthAlertShow:YES success:^{
         [DDYAuthorityManager ddy_CameraAuthAlertShow:YES success:^{
-            DDYCameraController *cameraVC = [DDYCameraController new];
-            [cameraVC setTakePhotoBlock:^(UIImage *image, UIViewController *vc) {
-                [vc dismissViewControllerAnimated:YES completion:^{   }];
-            }];
-            [[self ddy_GetResponderViewController] presentViewController:cameraVC animated:YES completion:^{ }];
+            [[self ddy_GetResponderViewController] presentViewController:self.cameraViewController animated:YES completion:^{ }];
         } fail:^(AVAuthorizationStatus authStatus) { }];
     } fail:^(AVAuthorizationStatus authStatus) { }];
 }

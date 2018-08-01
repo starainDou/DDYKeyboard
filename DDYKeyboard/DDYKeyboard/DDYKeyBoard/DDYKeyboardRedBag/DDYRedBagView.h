@@ -2,4 +2,6 @@
 
 @interface DDYRedBagView : UIView
 
++ (instancetype)viewWithFrame:(CGRect)frame;
+
 @end

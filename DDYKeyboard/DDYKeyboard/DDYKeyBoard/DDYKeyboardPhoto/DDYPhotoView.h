@@ -8,7 +8,7 @@
 
 @property (nonatomic, copy) void (^sendImagesBlock)(NSArray<UIImage *> *imgArray, BOOL isOrignal);
 
-+ (instancetype)voiceViewWithFrame:(CGRect)frame;
++ (instancetype)viewWithFrame:(CGRect)frame;
 
 - (void)reset;
 

@@ -2,6 +2,6 @@
 
 @interface DDYVoiceView : UIView
 
-+ (instancetype)voiceViewWithFrame:(CGRect)frame;
++ (instancetype)viewWithFrame:(CGRect)frame;
 
 @end

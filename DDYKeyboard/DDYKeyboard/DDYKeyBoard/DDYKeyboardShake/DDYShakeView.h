@@ -2,4 +2,6 @@
 
 @interface DDYShakeView : UIView
 
++ (instancetype)viewWithFrame:(CGRect)frame;
+
 @end
