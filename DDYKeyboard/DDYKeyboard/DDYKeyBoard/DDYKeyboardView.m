@@ -192,21 +192,22 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
         case DDYKeyboardStateSystem:
         {
             [self.textView becomeFirstResponder];
-            self.textView.inputView = nil;
+            [self.textView setInputView:nil];
             [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStateVoice:
         {
             [self.textView becomeFirstResponder];
-            self.textView.inputView = self.voiceView;
+            [self.textView setInputView:self.voiceView];
             [self.textView reloadInputViews];
         }
             break;
         case DDYKeyboardStatePhoto:
         {
             [self.textView becomeFirstResponder];
-            self.textView.inputView = self.photoView;
+            [self.textView setInputView:self.photoView];
+            [self.photoView reset];
             [self.textView reloadInputViews];
         }
             break;
@@ -244,7 +245,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
         case DDYKeyboardStateNone:
         default:
         {
-            self.textView.inputView = nil;
+            [self.textView setInputView:nil];
             [self.textView resignFirstResponder];
         }
             break;

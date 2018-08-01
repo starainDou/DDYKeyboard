@@ -1,6 +1,13 @@
 #import "DDYMacrol.h"
 #import "DDYCategoryHeader.h"
 
+// 背景色
+#define kbBgSmallColor [UIColor colorWithRed:245./255. green:245./255. blue:245./255. alpha:1.]
+#define kbBgMidColor [UIColor colorWithRed:235./255. green:235./255. blue:235./255. alpha:1.]
+#define kbBgBigColor [UIColor colorWithRed:225./255. green:225./255. blue:225./255. alpha:1.]
+// 字体色
+#define kbTextColor [UIColor colorWithRed:0. green:100./255. blue:1. alpha:1.]
+
 // 输入框字号
 #define kbTextViewFont 15
 // 输入框距顶部距离
@@ -50,4 +57,7 @@ typedef NS_ENUM(NSInteger, DDYVoiceState) {
     DDYVoiceStatePlay,              // 播放
 };
 
+/** 相册 */
+// 字体大小
+#define kbPhotoFont 16
 

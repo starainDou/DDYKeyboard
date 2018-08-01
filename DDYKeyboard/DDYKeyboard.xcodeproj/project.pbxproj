@@ -57,6 +57,8 @@
 		A4C6770A211074C10059E1DF /* DDYPhotoView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C67709211074C10059E1DF /* DDYPhotoView.m */; };
 		A4C6770D211074DF0059E1DF /* DDYRedBagView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6770C211074DF0059E1DF /* DDYRedBagView.m */; };
 		A4C67710211075420059E1DF /* DDYShakeView.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C6770F211075420059E1DF /* DDYShakeView.m */; };
+		A4C677162111505F0059E1DF /* DDYPhotoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A4C677152111505F0059E1DF /* DDYPhotoCell.m */; };
+		A4C6771C2111601C0059E1DF /* DDYPhoto.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A4C6771B2111601B0059E1DF /* DDYPhoto.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -162,6 +164,9 @@
 		A4C6770C211074DF0059E1DF /* DDYRedBagView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYRedBagView.m; sourceTree = "<group>"; };
 		A4C6770E211075410059E1DF /* DDYShakeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYShakeView.h; sourceTree = "<group>"; };
 		A4C6770F211075420059E1DF /* DDYShakeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYShakeView.m; sourceTree = "<group>"; };
+		A4C677142111505F0059E1DF /* DDYPhotoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DDYPhotoCell.h; sourceTree = "<group>"; };
+		A4C677152111505F0059E1DF /* DDYPhotoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DDYPhotoCell.m; sourceTree = "<group>"; };
+		A4C6771B2111601B0059E1DF /* DDYPhoto.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DDYPhoto.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,8 +273,11 @@
 		A4C6740F210EDDF80059E1DF /* DDYKeyboardPhoto */ = {
 			isa = PBXGroup;
 			children = (
+				A4C6771B2111601B0059E1DF /* DDYPhoto.bundle */,
 				A4C67708211074C10059E1DF /* DDYPhotoView.h */,
 				A4C67709211074C10059E1DF /* DDYPhotoView.m */,
+				A4C677142111505F0059E1DF /* DDYPhotoCell.h */,
+				A4C677152111505F0059E1DF /* DDYPhotoCell.m */,
 			);
 			path = DDYKeyboardPhoto;
 			sourceTree = "<group>";
@@ -616,6 +624,7 @@
 				A4C6767D2110409A0059E1DF /* DDYKeyboard.bundle in Resources */,
 				A4C6741B210EDDF80059E1DF /* Info.plist in Resources */,
 				A4C67656210FEB890059E1DF /* DDYVoice.bundle in Resources */,
+				A4C6771C2111601C0059E1DF /* DDYPhoto.bundle in Resources */,
 				A4C676F6211070760059E1DF /* DDYCamera.bundle in Resources */,
 				A4C6741A210EDDF80059E1DF /* LaunchScreen.storyboard in Resources */,
 			);
@@ -630,6 +639,7 @@
 			files = (
 				A4C6741E210EDDF80059E1DF /* ViewController.m in Sources */,
 				A4C67704211074A20059E1DF /* DDYGifView.m in Sources */,
+				A4C677162111505F0059E1DF /* DDYPhotoCell.m in Sources */,
 				A4C676CF2110702E0059E1DF /* MASCompositeConstraint.m in Sources */,
 				A4C677012110748F0059E1DF /* DDYEmojiView.m in Sources */,
 				A4C676D82110702E0059E1DF /* ViewController+MASAdditions.m in Sources */,
