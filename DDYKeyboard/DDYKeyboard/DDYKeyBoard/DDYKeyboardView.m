@@ -88,6 +88,15 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 - (DDYPhotoView *)photoView {
     if (!_photoView) {
         _photoView = [DDYPhotoView voiceViewWithFrame:CGRectMake(0, 0, DDYSCREENW, kbInputViewH)];
+        [_photoView setAlbumBlock:^{
+            NSLog(@"点击相册");
+        }];
+        [_photoView setEditBlock:^(UIImage *image) {
+            NSLog(@"点击编辑");
+        }];
+        [_photoView setSendImagesBlock:^(NSArray<UIImage *> *imgArray, BOOL isOrignal) {
+            NSLog(@"点击发送");
+        }];
     }
     return _photoView;
 }
@@ -255,6 +264,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 - (void)handleButtonClick:(UIButton *)button {
     if (self.currentButton == button && self.currentButton.selected) {
         self.currentButton.selected = NO;
+        [self.textView resignFirstResponder];
         return;
     }
     self.currentButton.selected = NO;

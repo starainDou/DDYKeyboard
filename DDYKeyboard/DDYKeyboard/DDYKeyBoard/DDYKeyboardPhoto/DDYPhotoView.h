@@ -2,6 +2,10 @@
 
 @interface DDYPhotoView : UIView
 
+@property (nonatomic, copy) void (^albumBlock)(void);
+
+@property (nonatomic, copy) void (^editBlock)(UIImage *image);
+
 @property (nonatomic, copy) void (^sendImagesBlock)(NSArray<UIImage *> *imgArray, BOOL isOrignal);
 
 + (instancetype)voiceViewWithFrame:(CGRect)frame;

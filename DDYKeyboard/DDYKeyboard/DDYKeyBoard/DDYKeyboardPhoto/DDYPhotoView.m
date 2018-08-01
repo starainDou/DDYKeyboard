@@ -94,7 +94,6 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
         [_orignalButton setImage:[UIImage imageNamed:@"DDYPhoto.bundle/selectN"] forState:UIControlStateNormal];
         [_orignalButton setImage:[UIImage imageNamed:@"DDYPhoto.bundle/selectS"] forState:UIControlStateSelected];
         [_orignalButton.titleLabel setFont:[UIFont boldSystemFontOfSize:kbPhotoFont]];
-        [_orignalButton setEnabled:NO];
         [_orignalButton addTarget:self action:@selector(handleOrignal:) forControlEvents:UIControlEventTouchUpInside];
         [_orignalButton ddy_SetStyle:DDYBtnStyleImgLeft padding:3.];
     }
@@ -108,7 +107,7 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
         [_sendButton setTitle:@"发送" forState:UIControlStateNormal];
         [_sendButton setTitleColor:kbTextColor forState:UIControlStateNormal];
         [_sendButton setTitleColor:DDY_LightGray forState:UIControlStateDisabled];
-        [_sendButton.titleLabel setFont:[UIFont boldSystemFontOfSize:kbPhotoFont]];
+        [_sendButton.titleLabel setFont:[UIFont boldSystemFontOfSize:kbPhotoFont-2]];
         [_sendButton setBackgroundColor:kbBgBigColor];
         [_sendButton addTarget:self action:@selector(handleSend:) forControlEvents:UIControlEventTouchUpInside];
         [_sendButton setEnabled:NO];
@@ -184,7 +183,7 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
     self.collectionView.frame = CGRectMake(0, 0, self.ddy_W, self.ddy_H-40);
     self.albumButton.frame = CGRectMake(15, self.ddy_H-35, 50, 30);
     self.editButton.frame = CGRectMake(self.albumButton.ddy_Right, self.ddy_H-35, 50, 30);
-    self.orignalButton.frame = CGRectMake(self.editButton.ddy_Right, self.ddy_H-35, 50, 30);
+    self.orignalButton.frame = CGRectMake(self.editButton.ddy_Right+5, self.ddy_H-35, 50, 30);
     self.sendButton.frame = CGRectMake(self.ddy_W - 50 - 15, self.ddy_H-35, 50, 30);
     
     self.tipLabel.frame = CGRectMake(0, self.ddy_CenterY-12, self.collectionView.ddy_W, 25);
