@@ -4,4 +4,6 @@
 
 + (instancetype)viewWithFrame:(CGRect)frame;
 
+- (void)shakeWarning;
+
 @end

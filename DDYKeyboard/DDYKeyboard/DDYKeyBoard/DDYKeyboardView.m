@@ -203,17 +203,25 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
 }
 
 - (void)addNotification {
+    // 键盘将要弹出通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
                                                  name:UIKeyboardWillShowNotification
                                                object:nil];
+    // 键盘将要收回通知
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillHide:)
                                                  name:UIKeyboardWillHideNotification
                                                object:nil];
+    // 截屏通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(userDidTakeScreenshot:)
+                                                 name:UIApplicationUserDidTakeScreenshotNotification
+                                               object:nil];
 }
 
-#pragma mark - KeyboardNotification
+#pragma mark - 通知 Notification
+#pragma mark 键盘将要弹出通知响应
 - (void)keyboardWillShow:(NSNotification *)notification {
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     CGFloat keyboardH = [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height;
@@ -228,6 +236,7 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     }];
 }
 
+#pragma mark 键盘将要收回通知响应
 - (void)keyboardWillHide:(NSNotification *)notification {
     NSTimeInterval duration = [notification.userInfo[UIKeyboardAnimationDurationUserInfoKey] doubleValue];
     NSLog(@"键盘收回");
@@ -236,6 +245,11 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
     } completion:^(BOOL finished) {
         self.keyboardH = 0;
     }];
+}
+
+#pragma mark 截屏通知响应
+- (void)userDidTakeScreenshot:(NSNotification *)notification {
+    NSLog(@"检测到截屏");
 }
 
 - (void)changeKeyboardState:(DDYKeyboardState)state {
@@ -275,9 +289,11 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
             break;
         case DDYKeyboardStateShake:
         {
-            [self.textView becomeFirstResponder];
-            [self.textView setInputView:self.shakeView];
-            [self.textView reloadInputViews];
+            self.currentButton.selected = NO;
+//            [self.textView becomeFirstResponder];
+//            [self.textView setInputView:self.shakeView];
+//            [self.textView reloadInputViews];
+            [self.shakeView shakeWarning];
         }
             break;
         case DDYKeyboardStateGif:

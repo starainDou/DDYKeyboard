@@ -3,6 +3,7 @@
 #import "DDYPhotoCell.h"
 #import <Photos/Photos.h>
 #import "DDYAuthorityManager.h"
+#import "Masonry.h"
 
 static NSString *cellID = @"DDYKeyboardPhotoCellID";
 
@@ -23,6 +24,8 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
 @property (nonatomic, strong) UILabel *tipLabel;
 /** 无权限时前往设置 */
 @property (nonatomic, strong) UIButton *settingButton;
+/** 分割线 */
+@property (nonatomic, strong) UIView *lineView;
 
 @end
 
@@ -119,9 +122,10 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
 - (UILabel *)tipLabel {
     if (!_tipLabel) {
         _tipLabel = [[UILabel alloc] init];
-        [_tipLabel setFont:[UIFont systemFontOfSize:22]];
+        [_tipLabel setFont:[UIFont systemFontOfSize:kbPhotoFont]];
         [_tipLabel setTextAlignment:NSTextAlignmentCenter];
         [_tipLabel setTextColor:DDY_Small_Black];
+        [_tipLabel setContentHuggingPriority:UILayoutPriorityRequired forAxis:UILayoutConstraintAxisHorizontal];
         [self.collectionView addSubview:_tipLabel];
     }
     return _tipLabel;
@@ -140,6 +144,15 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
     return _settingButton;
 }
 
+#pragma mark 分割线 getter
+- (UIView *)lineView {
+    if (!_lineView) {
+        _lineView = [[UIView alloc] init];
+        _lineView.backgroundColor = kbBgBigColor;
+    }
+    return _lineView;
+}
+
 + (instancetype)viewWithFrame:(CGRect)frame {
     return [[self alloc] initWithFrame:frame];
 }
@@ -148,6 +161,7 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
     if (self = [super initWithFrame:frame]) {
         self.backgroundColor = kbBgSmallColor;
         [self addSubview:self.collectionView];
+        [self addSubview:self.lineView];
         [self addSubview:self.albumButton];
         [self addSubview:self.editButton];
         [self addSubview:self.orignalButton];
@@ -180,14 +194,48 @@ static NSString *cellID = @"DDYKeyboardPhotoCellID";
 
 - (void)layoutSubviews {
     [super layoutSubviews];
-    self.collectionView.frame = CGRectMake(0, 0, self.ddy_W, self.ddy_H-40);
-    self.albumButton.frame = CGRectMake(15, self.ddy_H-35, 50, 30);
-    self.editButton.frame = CGRectMake(self.albumButton.ddy_Right, self.ddy_H-35, 50, 30);
-    self.orignalButton.frame = CGRectMake(self.editButton.ddy_Right+5, self.ddy_H-35, 50, 30);
-    self.sendButton.frame = CGRectMake(self.ddy_W - 50 - 15, self.ddy_H-35, 50, 30);
     
-    self.tipLabel.frame = CGRectMake(0, self.ddy_CenterY-12, self.collectionView.ddy_W, 25);
-    self.settingButton.frame = CGRectMake(0, self.tipLabel.ddy_Bottom, self.collectionView.ddy_W, 25);
+    [self.collectionView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.top.right.mas_equalTo(self);
+        make.height.mas_equalTo(self).offset(-40);
+    }];
+    [self.lineView mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self);
+        make.top.mas_equalTo(self.collectionView.mas_bottom);
+        make.height.mas_equalTo(0.5);
+    }];
+    [self.albumButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self).offset(15);
+        make.top.mas_equalTo(self.collectionView.mas_bottom).offset(5);
+        make.width.lessThanOrEqualTo(100);
+        make.height.mas_equalTo(30);
+    }];
+    [self.editButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.albumButton.mas_right).offset(15);
+        make.top.mas_equalTo(self.collectionView.mas_bottom).offset(5);
+        make.width.lessThanOrEqualTo(100);
+        make.height.mas_equalTo(30);
+    }];
+    [self.orignalButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.mas_equalTo(self.editButton.mas_right).offset(15);
+        make.top.mas_equalTo(self.collectionView.mas_bottom).offset(5);
+        make.width.lessThanOrEqualTo(100);
+        make.height.mas_equalTo(30);
+    }];
+    [self.sendButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.right.mas_equalTo(self).offset(-15);
+        make.top.mas_equalTo(self.collectionView.mas_bottom).offset(5);
+        make.width.mas_greaterThanOrEqualTo(50);
+        make.height.mas_equalTo(30);
+    }];
+    [self.tipLabel mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self);
+        make.centerY.mas_equalTo(self.collectionView.mas_centerY).offset(-5);
+    }];
+    [self.settingButton mas_updateConstraints:^(MASConstraintMaker *make) {
+        make.left.right.mas_equalTo(self);
+        make.top.mas_equalTo(self.tipLabel.mas_bottom).offset(5);
+    }];
     
     self.albumButton.enabled = self.settingButton.hidden;
     self.tipLabel.text = self.settingButton.hidden ? @"暂无数据" : @"要允许访问您的照片，请在设置中授权";

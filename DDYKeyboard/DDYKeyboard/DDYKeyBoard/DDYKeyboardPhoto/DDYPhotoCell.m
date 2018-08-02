@@ -142,12 +142,12 @@
     if (!_alertWindow) {
         for (id view in [UIApplication sharedApplication].windows) {
             if ([@"UIRemoteKeyboardWindow" isEqualToString:NSStringFromClass([view class])]) {
-                _alertWindow = view;
+                _alertWindow = view;NSLog(@"%f", [(UIWindow *)view windowLevel]);
                 break;
             }
         }
     }
-    return _alertWindow;
+    return _alertWindow ? _alertWindow : DDYKeyWindow;
 }
 
 - (void)layoutSubviews {
