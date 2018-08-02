@@ -142,7 +142,7 @@
     if (!_alertWindow) {
         for (id view in [UIApplication sharedApplication].windows) {
             if ([@"UIRemoteKeyboardWindow" isEqualToString:NSStringFromClass([view class])]) {
-                _alertWindow = view;NSLog(@"%f", [(UIWindow *)view windowLevel]);
+                _alertWindow = view;
                 break;
             }
         }

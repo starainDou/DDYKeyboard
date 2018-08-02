@@ -290,9 +290,6 @@ static inline NSString *imgName(NSString *imgName) {return [NSString stringWithF
         case DDYKeyboardStateShake:
         {
             self.currentButton.selected = NO;
-//            [self.textView becomeFirstResponder];
-//            [self.textView setInputView:self.shakeView];
-//            [self.textView reloadInputViews];
             [self.shakeView shakeWarning];
         }
             break;

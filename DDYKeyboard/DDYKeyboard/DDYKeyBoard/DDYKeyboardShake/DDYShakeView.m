@@ -23,7 +23,6 @@
     frameAnimation.removedOnCompletion = YES;
     for (id view in [UIApplication sharedApplication].windows) {
         if ([view isKindOfClass:[UIWindow class]]) {
-            NSLog(@"%@ isKindOfClass",view);
             [[(UIWindow *)view layer] addAnimation:frameAnimation forKey:@"shake"];
         }
     }

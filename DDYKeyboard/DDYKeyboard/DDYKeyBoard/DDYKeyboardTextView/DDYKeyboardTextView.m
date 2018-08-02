@@ -25,10 +25,11 @@
         [self setBackgroundColor:[UIColor whiteColor]];
         [self setEnablesReturnKeyAutomatically:YES];
         
-        [self setDdy_CenterY:self.ddy_H/2.];
+        
         [self setPlaceholder:@"Test Message Placeholder"];
         [self setPlaceholderColor:[UIColor lightGrayColor]];
         [self ddy_AllowsNonContiguousLayout:NO];
+        [self setDdy_CenterY:self.ddy_H/2.];
         [self ddy_AutoHeightWithMinHeight:self.bounds.size.height maxHeight:90];
         
         // 防止图片表情误触

@@ -34,11 +34,13 @@
 /** 拖动手势 + 代理 */
 - (void)ddy_AddPanGestureTarget:(id)target action:(SEL)action delegate:(id)delegate;
 
-#pragma mark - ---------------- 截屏 ------------------
+#pragma mark - ---------------- 截图 ------------------
 /** 截屏生成图片 */
 - (nullable UIImage *)ddy_SnapshotImage;
 /** 截屏生成PDF */
 - (nullable NSData *)ddy_SnapshotPDF;
+/** 整个截屏 */
++ (UIImage *)ddy_ScreenshotInPNGFormat;
 
 #pragma mark - ---------------- UI ------------------
 /** 阴影 */

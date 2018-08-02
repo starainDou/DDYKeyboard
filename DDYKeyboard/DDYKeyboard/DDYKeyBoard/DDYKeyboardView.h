@@ -25,6 +25,22 @@ typedef NS_OPTIONS(NSInteger, DDYKeyboardState) {
 
 @interface DDYKeyboardView : UIView
 
+@property (nonatomic, copy) void (^sendVoiceBlock)(NSString *path);
+
+@property (nonatomic, copy) void (^sendPhotosBlock)(NSArray <UIImage *>*photos);
+
+@property (nonatomic, copy) void (^sendVideoBlock)(NSString *path);
+
+@property (nonatomic, copy) void (^sendShakeBlock)(void);
+
+@property (nonatomic, copy) void (^sendGifBlock)(NSString *path);
+
+@property (nonatomic, copy) void (^sendRedBagBlock)(void);
+
+@property (nonatomic, copy) void (^sendTextBlock)(NSString *text);
+
+@property (nonatomic, copy) void (^keyboardShowAndHideBlock)(CGFloat keyboardHeight);
+
 @property (nonatomic, assign, readonly) DDYKeyboardState keyboardState;
 
 + (instancetype)keyboardTypeQQAllState:(DDYKeyboardState)allState;

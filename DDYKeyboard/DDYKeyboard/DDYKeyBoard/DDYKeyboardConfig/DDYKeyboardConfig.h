@@ -22,7 +22,8 @@
 #define kbButtonTop 20
 // 按钮距底部距离
 #define kbButtonBottom 10
-// 常驻bar高度自动计算 H textViewTop + 输入框高度(可变) + buttonTop + buttonWH + buttonBottom
+// 常驻bar高度自动计算 H kbTextViewTop + 输入框高度(可变) + buttonTop + buttonWH + buttonBottom
+// 常驻bar默认高度 kbTextViewTop + kbTextViewH + kbButtonTop + kbButtonWH + kbButtonBottom = 10+30+20+30+10
 
 // 功能实现区域(textView.inputView)高度
 #define kbInputViewH 260
