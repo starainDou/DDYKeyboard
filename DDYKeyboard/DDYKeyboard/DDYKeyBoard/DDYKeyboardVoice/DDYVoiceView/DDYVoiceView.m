@@ -30,9 +30,31 @@
         _scrollView.pagingEnabled = YES;
         _scrollView.contentSize = CGSizeMake(self.ddy_W * 3, self.ddy_H);
         _scrollView.delegate = self;
+        _scrollView.bounces = NO;
         _scrollView.showsHorizontalScrollIndicator = NO;
     }
     return _scrollView;
+}
+
+- (DDYVoiceChangeView *)changeView {
+    if (!_changeView) {
+        _changeView = [[DDYVoiceChangeView alloc] initWithFrame:CGRectMake(0*self.ddy_W, 0, self.ddy_W, self.ddy_H)];
+    }
+    return _changeView;
+}
+
+- (DDYVoiceTalkView *)talkView {
+    if (!_talkView) {
+        _talkView = [[DDYVoiceTalkView alloc] initWithFrame:CGRectMake(1*self.ddy_W, 0, self.ddy_W, self.ddy_H)];
+    }
+    return _talkView;
+}
+
+- (DDYVoiceRecordView *)recordView {
+    if (!_recordView) {
+        _recordView = [[DDYVoiceRecordView alloc] initWithFrame:CGRectMake(2*self.ddy_W, 0, self.ddy_W, self.ddy_H)];
+    }
+    return _recordView;
 }
 
 - (DDYVoiceIndicator *)indicatorView {
@@ -41,7 +63,9 @@
         __weak __typeof (self)weakSelf = self;
         [_indicatorView setChangeIndexBlock:^(NSInteger selectedIndex) {
             __strong __typeof (weakSelf)strongSelf = weakSelf;
-            strongSelf.scrollView.contentOffset = CGPointMake(self.ddy_W * selectedIndex, 0);
+            [UIView animateWithDuration:0.25 animations:^{
+                strongSelf.scrollView.contentOffset = CGPointMake(strongSelf.ddy_W * selectedIndex, 0);
+            }];
         }];
     }
     return _indicatorView;
@@ -65,19 +89,35 @@
     if (self = [super initWithFrame:frame]) {
         // 滚动视图
         [self addSubview:self.scrollView];
-        
+        // 变声视图
+        [self.scrollView addSubview:self.changeView];
+        // 对讲视图
+        [self.scrollView addSubview:self.talkView];
+        // 录音视图
+        [self.scrollView addSubview:self.recordView];
         // 标签指示
         [self addSubview:self.indicatorView];
-        
-        // 测试颜色
-        self.backgroundColor = DDYRandomColor;
-        
         // 选中对讲
         self.scrollView.contentOffset = CGPointMake(self.ddy_W, 0);
+        // 测试颜色
+        self.backgroundColor = DDYRandomColor;
     }
     return self;
 }
 
+#pragma mark - 从此分开
+#pragma mark 添加注解
+// TODO: 将要完成的内容
+// MARK: 标记注解
+// FIXME: 标记以后要修复或者完善的内容
+// ???: 有疑问的地方
+// !!!: 需要注意的地方
+/**
+ TODO: 添加标记6
+ MARK: 标记注解
+ */
+#pragma mark FIXME: 标记以后要修复或者完善的内容
+#warning 警告提示
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
     [_indicatorView scrollWithAssociateScrollView:scrollView];
 }

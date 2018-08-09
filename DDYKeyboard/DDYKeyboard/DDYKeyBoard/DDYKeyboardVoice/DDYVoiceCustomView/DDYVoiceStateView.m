@@ -60,7 +60,7 @@
 
 - (UILabel *)timeLabel {
     if (!_timeLabel) {
-        _timeLabel = [];
+        //        _timeLabel = [];
     }
     return _timeLabel;
 }

@@ -70,7 +70,9 @@
 }
 
 - (void)handleClick:(UIButton *)button {
-    self.selectedIndex = button.tag-100;
+    if (self.changeIndexBlock) {
+        self.changeIndexBlock(button.tag-100);
+    }
 }
 
 - (void)scrollWithAssociateScrollView:(UIScrollView *)scrollView {
@@ -81,9 +83,6 @@
 - (void)setSelectedIndex:(NSInteger)selectedIndex {
     if (_selectedIndex != selectedIndex) {
         _selectedIndex = selectedIndex;
-        if (self.changeIndexBlock) {
-            self.changeIndexBlock(selectedIndex);
-        }
         for (UIButton *button in self.labelContainer.subviews) {
             button.selected = (selectedIndex == (button.tag-100));
         }
